@@ -1,0 +1,870 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Anasayfa";
+}
+
+<style>
+
+
+    p {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .modal-title {
+        color: white;
+    }
+
+    .btn:focus, .btn:active, button:focus, button:active {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    #image-gallery .modal-footer {
+        display: block;
+    }
+
+    .content {
+        max-width: 100% !important;
+        height: auto;
+    }
+
+    .sozlesme {
+        max-width: 100%;
+        color: black;
+        background-color: white;
+    }
+
+    .thumb {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .modal-body #image-gallery-image {
+        opacity: 1 !important;
+    }
+
+    .modal-content {
+        max-width: 55% !important;
+        background-color: rgba(255,255,0,0)
+    }
+
+    .fonttitle {
+        font-size: 75px !important;
+    }
+
+    @@media screen and (max-width: 600px) {
+        .modal-content {
+            max-width: 100% !important;
+        }
+
+        .modal-dialog {
+            margin-left: 10% !important;
+        }
+
+        .sozlesme {
+            max-width: 100%;
+            color: black;
+            background-color: white;
+        }
+
+        .contactbtn {
+            margin-left: 65px !important;
+        }
+
+        .fonttitle {
+            font-size: 35px !important;
+        }
+
+        .row {
+            margin-right: 0px !important;
+            margin-left: 0px !important;
+        }
+
+        .thumb {
+            margin-right: 0px !important;
+            margin-left: 0px !important;
+        }
+
+        .duzenbtn {
+            width: 300px !important;
+            font-size: 12px;
+        }
+    }
+
+    .duzenbtn {
+    }
+
+    .contactbtn {
+        margin-left: 250px;
+    }
+
+    .modal-dialog {
+        margin-left: 35%;
+    }
+
+    h2 {
+        text-align: center;
+        padding: 20px;
+    }
+    /* Slider */
+
+    .slick-slide {
+        margin: 0px 20px;
+        background-color:rgba(255,255,255,0.5);
+    }
+
+        .slick-slide img {
+            width: 100%;
+        }
+
+    .slick-slider {
+        position: relative;
+        display: block;
+        box-sizing: border-box;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+        -khtml-user-select: none;
+        -ms-touch-action: pan-y;
+        touch-action: pan-y;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .slick-list {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+        .slick-list:focus {
+            outline: none;
+        }
+
+        .slick-list.dragging {
+            cursor: pointer;
+            cursor: hand;
+        }
+
+    .slick-slider .slick-track,
+    .slick-slider .slick-list {
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    .slick-track {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: block;
+    }
+
+        .slick-track:before,
+        .slick-track:after {
+            display: table;
+            content: '';
+        }
+
+        .slick-track:after {
+            clear: both;
+        }
+
+    .slick-loading .slick-track {
+        visibility: hidden;
+    }
+
+    .slick-slide {
+        display: none;
+        float: left;
+        height: 100%;
+        min-height: 1px;
+    }
+
+    [dir='rtl'] .slick-slide {
+        float: right;
+    }
+
+    .slick-slide img {
+        display: block;
+    }
+
+    .slick-slide.slick-loading img {
+        display: none;
+    }
+
+    .slick-slide.dragging img {
+        pointer-events: none;
+    }
+
+    .slick-initialized .slick-slide {
+        display: block;
+    }
+
+    .slick-loading .slick-slide {
+        visibility: hidden;
+    }
+
+    .slick-vertical .slick-slide {
+        display: block;
+        height: auto;
+        border: 1px solid transparent;
+    }
+
+    .slick-arrow.slick-hidden {
+        display: none;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        $('.customer-logos').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            arrows: false,
+            dots: false,
+            pauseOnHover: false,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 3
+                }
+            }]
+        });
+    });
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap" rel="stylesheet">
+<div class="site-blocks-cover overlay" style="background-image: url(/Content/Template/imagess/bgg.jpg);" data-aos="fade" data-stellar-background-ratio="0.7">
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-md-12" data-aos="fade-up" data-aos-delay="400">
+                <div class="row mb-4">
+                    <div class="col-md-12 text-center">
+
+                        <p class="fonttitle" style="font-family: 'Lora', serif;">
+                            @Moneyshowertech.PL.Resources.Language.SliderText
+                        </p>
+                        <p class=" lead">
+                            MoneyShowerTech
+
+                        </p>
+                        <p class=" lead">
+                            @Moneyshowertech.PL.Resources.Language.SliderContent
+
+                        </p>
+                     
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="products-section" style="padding-bottom:0px;" class="site-section bg-light">
+    <div class="container">
+        <div class="row mb-5 justify-content-center">
+            <div class="col-md-6 text-center">
+                <p style="font-size:30px; text-align:center; margin-top:2rem;">@Moneyshowertech.PL.Resources.Language.Ürünlerimiz</p>
+                <hr style="height:2px;border-width:0;color:black;background-color:black; width:50%">
+                <br />
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-5">
+                <div class="product-item">
+                    <figure>
+                        <img src="~/Content/Template/imagess/Moneyshower/Moneyshower.jpg" alt="Image" class="img-fluid" style="border-radius: 20px;height:200px;">
+                    </figure>
+                    <div class="px-4">
+                        <h3><a href="#">Money Shower</a></h3>
+
+                        <p class="mb-4">
+                            @Moneyshowertech.PL.Resources.Language.MoneyShowerContent
+                        </p>
+                        <div>
+                            <a href="~/@Moneyshowertech.PL.Resources.Language.ShortName/MoneyShower" class="rounded-0"> @Moneyshowertech.PL.Resources.Language.ProductDetail ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5">
+                <div class="product-item">
+                    <figure>
+                        <img src="~/Content/Template/imagess/MoneyCountingShower/MoneyCountingShower.jpg" alt="Image" class="img-fluid" style="border-radius: 20px;height:200px;">
+                    </figure>
+                    <div class="px-4">
+                        <h3><a href="#">Money Counting Shower</a></h3>
+
+                        <p class="mb-4">
+                            @Moneyshowertech.PL.Resources.Language.MoneyCountingContent
+                        </p>
+                        <div>
+                            <a href="~/@Moneyshowertech.PL.Resources.Language.ShortName/MoneyCountingShower" class="rounded-0">@Moneyshowertech.PL.Resources.Language.ProductDetail ></a>
+                            <form action="/Tr/MoneyCountingShower" method="get">
+                                <button type="submit" style="width:275px;border-radius:15px;" class="btn btn-info btn-outline-blue">@Moneyshowertech.PL.Resources.Language.Buy</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5">
+                <div class="product-item">
+                    <figure>
+                        <img style=" border-radius: 20px;" src="~/Content/Template/imagess/thingshower4.png" alt="Image" class="img-fluid" />
+                    </figure>
+                    <div class="px-4 mt-4">
+                        <h3><a href="#">Thing Shower</a></h3>
+
+                        <p class="mb-4">@Moneyshowertech.PL.Resources.Language.ThingShowerShortContent</p>
+                        <div>
+                            <a href="~/@Moneyshowertech.PL.Resources.Language.ShortName/ThingShower" class="rounded-0">@Moneyshowertech.PL.Resources.Language.ProductDetail ></a>
+                            <form action="/tr/ThingShower" method="get">
+                                <button type="submit" style="width:275px;border-radius:15px;" class="btn btn-info btn-outline-blue">@Moneyshowertech.PL.Resources.Language.Buy</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>
+
+<div id="dist-section" class="col-12 text-center mt-4 mb-4">
+    <img src="~/Content/Template/imagess/itu.jpeg" style="max-height:150px;"/>
+    <img src="~/Content/Template/imagess/budotek.jpeg" style="max-height:150px;" />
+</div>
+
+<div  class="container ">
+
+
+    <div class="col-12">
+        <div class="row  justify-content-center">
+            <div class="col-md-6 text-center">
+                <p style="font-size:30px; text-align:center; margin-top:2rem;">@Moneyshowertech.PL.Resources.Language.OurDistributors</p>
+                <hr style="height:2px;border-width:0;color:black;background-color:black; width:85%">
+                <br />
+            </div>
+        </div>
+
+        <div class="card-deck">
+            <div class="card">
+
+                <img class="card-img-top resimdiv" src="~/Content/Template/imagess/ankara.jpg" >
+                <div class="card-body">
+                    <h5 class="card-title">TÜRKİYE</h5>
+                    <p class="card-text"> PROFİS TEKNİK SERVİS TİCARET ANONİM ŞİRKETİ</p>
+                </div>
+
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="~/Content/Template/imagess/berlin.jpg" >
+                <div class="card-body">
+                    <h5 class="card-title">ALMANYA</h5>
+                    <p class="card-text"> OTTAMAN</p>
+                </div>
+
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="~/Content/Template/imagess/arnavutluk.jpg" >
+                <div class="card-body">
+                    <h5 class="card-title">ARNAVUTLUK, MAKEDONYA, KOSOVA VE KARADAĞ</h5>
+                    <p class="card-text">ALBPRONDERTIM SHPK</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="col-12 text-center " style="margin-top:100px;">
+    <a href="/@Moneyshowertech.PL.Resources.Language.ShortName/Anasayfa/#contact-section" class="btn duzenbtn btn-info btn-outline-blue ml-3" style="border-radius:15px;">@Moneyshowertech.PL.Resources.Language.DistButonText </a>
+</div>
+<div class="container">
+
+    <div id="dealer-section" class="col-12 site-section">
+        <div class="row  justify-content-center">
+            <div class="col-md-6 text-center">
+                <p style="font-size:30px; text-align:center; margin-top:2rem;">@Moneyshowertech.PL.Resources.Language.OurDealerships</p>
+                <hr style="height:2px;border-width:0;color:black;background-color:black; width:50%">
+                <br />
+            </div>
+        </div>
+
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="~/Content/Template/imagess/ankara.jpg" >
+                <div class="card-body">
+                    <h5 class="card-title">TURA TURİZM DIŞ TİCARET LİMİTED ŞİRKETİ</h5>
+                    <p class="card-text">İnönü Mah.Cumhuriyet Cad. Park Apt.No:109/A Elmadağ / Şişli / İstanbul</p>
+                </div>
+
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="~/Content/Template/imagess/galata.jpg" >
+                <div class="card-body">
+                    <h5 class="card-title">PROFİS TEKNİK SERVİS TİCARET ANONİM ŞİRKETİ</h5>
+                    <p class="card-text">Halil Rıfat Paşa Mah. Perpa Ticaret Merkezi A Blok Kat: 11 No: 1477 Şişli / İstanbul</p>
+                </div>
+
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="~/Content/Template/imagess/istanbul.jpg" >
+                <div class="card-body">
+                    <h5 class="card-title">TEO ELEKTRONİK ÜRÜNLER İTHALAT İHRACAT LİMİTED ŞİRKETİ</h5>
+                    <p class="card-text"> Kayabaşı Mah. Kayaşehir Blv. Park Mavera 2 B1 No: 46 C İç Kapı No: 30 Başakşehir / İstanbul </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="col-12 text-center " style="margin-top:10px;">
+    <a href="/@Moneyshowertech.PL.Resources.Language.ShortName/Anasayfa/#contact-section" class="btn duzenbtn btn-info btn-outline-blue ml-3" style="border-radius:15px;">@Moneyshowertech.PL.Resources.Language.DealerButonText </a>
+</div>
+
+<div class="site-section" id="press-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="" style="font-size:30px; text-align:center; margin-top:2rem;">@Moneyshowertech.PL.Resources.Language.BasındaBiz</p>
+                <hr style="height:2px;border-width:0;color:black;background-color:black; width:25%">
+                <br />
+            </div>
+            <div class="row">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail">
+                            <img class="img-thumbnail"
+                                 src="~/Content/Template/imagess/WeInThePress/endegerli3-patent.jpg">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail">
+                            <img class="img-thumbnail"
+                                 src="~/Content/Template/imagess/WeInThePress/genclikvesporbakani.jpg">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail">
+                            <img class="img-thumbnail"
+                                 src="~/Content/Template/imagess/WeInThePress/GirisimKocu.jpg">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail">
+                            <img class="img-thumbnail"
+                                 src="~/Content/Template/imagess/WeInThePress/ilmuduru.jpg">
+                        </a>
+                    </div>
+
+                    <div class="col-12 text-center">
+                        <a href="~/@Moneyshowertech.PL.Resources.Language.ShortName/Galeri" class="btn btn-primary">@Moneyshowertech.PL.Resources.Language.Continue</a>
+                    </div>
+                    <br />
+
+                    <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content" style="border:none ">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="image-gallery-title"></h4>
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true" style="color:white;">×</span><span class="sr-only">Close</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body" style="border:none ">
+                                    <img id="image-gallery-image" class="img-responsive col-md-12" src="">
+                                </div>
+                                <div class="modal-footer" style="border:none ">
+                                    <button type="button" class="btn btn-light float-left" id="show-previous-image">
+                                        <i class="fa fa-arrow-left"></i>
+                                    </button>
+                                    <button type="button" id="show-next-image" class="btn btn-light float-right">
+                                        <i class="fa fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <p class="" style="font-size:30px; text-align:center; margin-top:2rem;">@Moneyshowertech.PL.Resources.Language.Customers</p>
+    <hr style="height:2px;border-width:0;color:black;background-color:black; width:25%">
+    <br />
+    <section class="customer-logos slider">
+        <div class="slide"><img src="~/Content/Template/imagess/Customers/yapıkredi.jpg"></div>
+        <div class="slide"><img src="~/Content/Template/imagess/Customers/ntv.jpg"></div>
+        <div class="slide"><img src="~/Content/Template/imagess/Customers/efes.jpg"></div>
+
+        <div class="slide"><img src="~/Content/Template/imagess/Customers/anadolu-efes.jpg"></div>
+        <div class="slide"><img src="~/Content/Template/imagess/Customers/bogazici-tto.jpg"></div>
+
+        <div class="slide"><img src="~/Content/Template/imagess/Customers/biolab.jpg"></div>
+        <div class="slide"><img src="~/Content/Template/imagess/Customers/iga.jpg"></div>
+        <div class="slide"><img src="~/Content/Template/imagess/Customers/liva.jpg"></div>
+        <div class="slide"><img src="~/Content/Template/imagess/Customers/proline.jpg"></div>
+        <div class="slide"><img src="~/Content/Template/imagess/Customers/promedi.jpg"></div>
+        <div class="slide"><img src="~/Content/Template/imagess/Customers/rixos.jpg"></div>
+        <div class="slide"><img src="~/Content/Template/imagess/Customers/tura-turizm.jpg"></div>
+        <div class="slide"><img src="~/Content/Template/imagess/Customers/türk-reasürans.jpg"></div>
+        <div class="slide"><img src="~/Content/Template/imagess/Customers/bemes.jpg"></div>
+
+    </section>
+</div>
+
+
+<div class="container" style="margin-top:6rem;" id="certificate-section">
+    <p class="" style="font-size:30px; text-align:center; margin-top:2rem;">
+        @Moneyshowertech.PL.Resources.Language.Certificate</h2>
+    <hr style="height:2px;border-width:0;color:black;background-color:black; width:25%">
+    <br />
+    <div class="row">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Iso 1085"
+                   data-image="/Content/Template/imagess/Sertificate/iso-1085x1536.jpg"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="~/Content/Template/imagess/Sertificate/iso-1085x1536.jpg">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Iso 10002"
+                   data-image="/Content/Template/imagess/Sertificate/iso10002-1080x1536.jpg"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="~/Content/Template/imagess/Sertificate/iso10002-1080x1536.jpg">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Iso 14001"
+                   data-image="/Content/Template/imagess/Sertificate/iso14001-1078x1536.jpg"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="~/Content/Template/imagess/Sertificate/iso14001-1078x1536.jpg">
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Iso 45001"
+                   data-image="/Content/Template/imagess/Sertificate/iso45001-1078x1536.jpg"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="~/Content/Template/imagess/Sertificate/iso45001-1078x1536.jpg">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Iso 9001"
+                   data-image="/Content/Template/imagess/Sertificate/iso9001-1085x1536.jpg"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="~/Content/Template/imagess/Sertificate/iso9001-1085x1536.jpg">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="İtü Rapor"
+                   data-image="/Content/Template/imagess/Sertificate/0001-1086x1536.jpg"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="~/Content/Template/imagess/Sertificate/0001-1086x1536.jpg">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="İtü Rapor"
+                   data-image="/Content/Template/imagess/Sertificate/0002-1086x1536.jpg"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="~/Content/Template/imagess/Sertificate/0002-1086x1536.jpg">
+                </a>
+            </div>
+        </div>
+        <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content" style="border:none ">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="image-gallery-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true" style="color:white;">×</span><span class="sr-only">Close</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" style="border:none ">
+                        <img id="image-gallery-image" class="img-responsive col-md-12" src="">
+                    </div>
+                    <div class="modal-footer" style="border:none ">
+                        <button type="button" class="btn btn-light float-left" id="show-previous-image">
+                            <i class="fa fa-arrow-left"></i>
+                        </button>
+                        <button type="button" id="show-next-image" class="btn btn-light float-right">
+                            <i class="fa fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="site-section bg-light" id="contact-section">
+    <div class="col-12 container">
+        <div class="row col-12  mb-5">
+            <div class="col-12 text-center">
+
+                <p class="" style="font-size:30px; text-align:center; margin-top:2rem;">@Moneyshowertech.PL.Resources.Language.ContactUs</p>
+                <hr style="height:2px;border-width:0;color:black;background-color:black; width:50%">
+                <br />
+            </div>
+        </div>
+        <div class="row col-12 justify-content-center">
+            <div class="col-lg-6 col-md-6 m-b30">
+                <div class="contact-info">
+                    <div class="contact-info-inner" style="margin-top:25px;">
+
+                        <!-- TITLE START-->
+                        <div style="margin-bottom:2rem;" class=" wt-small-separator-outer">
+                            <h3 style="color:black; ">@Moneyshowertech.PL.Resources.Language.ContactInfo</h3>
+                        </div>
+
+                        <!-- TITLE END-->
+
+                        <div class="" style="" ; border-color:black;">
+
+                            <div class="wt-icon-box-wraper left m-b30">
+
+                                <div class="contactcontent" style="margin-left:30px; font-size:medium;">
+                                    <span class="contactcontent" style="color:black"><i class="fas fa-phone-square-alt"></i>&nbsp @Moneyshowertech.PL.Resources.Language.Phone</span>
+                                    <p style="font-weight:normal;">+90 850 255 0439</p>
+                                </div>
+                            </div>
+
+                            <div class="wt-icon-box-wraper left m-b30">
+
+                                <div class="contactcontent" style="margin-left:30px;">
+                                    <span class="contactcontent" style="color:black"><i class="fas fa-envelope"></i>&nbsp @Moneyshowertech.PL.Resources.Language.Email</span>
+                                    <p style="font-weight:normal;">info@moneyshowertech.com</p>
+                                </div>
+                            </div>
+
+                            <div class="wt-icon-box-wraper left m-b30">
+                                <div class="contactcontent" style="margin-left:30px;">
+                                    <span class="m-t0" style="color:black">
+                                        <i class="fas fa-map-marked-alt"></i>
+
+                                        &nbsp @Moneyshowertech.PL.Resources.Language.Adress
+                                    </span>
+                                    <p style="font-weight:normal;">Dudullu OSB Des 2. Cadde TEKNOPARK No:8/08 Ümraniye/İstanbul</p>
+                                </div>
+                            </div>
+                            <br />
+
+                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.106433316109!2d29.18017121536236!3d41.001043579301495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cacf96431a778f%3A0xd17f604170ddaf!2sB%C3%9CDOTEK%20Teknopark!5e0!3m2!1str!2str!4v1600117350171!5m2!1str!2str" width="100%" height="350px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 " style="margin-top:30px;">
+
+                <!-- TITLE START-->
+                <div class=" wt-small-separator-outer">
+                    <h3 style="color:black;">@Moneyshowertech.PL.Resources.Language.ContactForm</h3>
+                </div>
+
+                <!-- TITLE END-->
+
+                <form action="~/tr/Home/SendNewMessage" name="idFormContact" method="post">
+                    <div class="row form-group">
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <label class="text-black" for="fname">@Moneyshowertech.PL.Resources.Language.Firstname</label>
+                            <input type="text" id="fname" name="Firstname" class="form-control rounded-0" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="text-black" for="lname">@Moneyshowertech.PL.Resources.Language.Lastname</label>
+                            <input type="text" id="lname" name="Lastname" class="form-control rounded-0" required>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <label class="text-black" for="email">@Moneyshowertech.PL.Resources.Language.Email @Moneyshowertech.PL.Resources.Language.Adress</label>
+                            <input type="email" id="email" name="Email" class="form-control rounded-0" required>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <label class="text-black" for="subject">@Moneyshowertech.PL.Resources.Language.Topic</label>
+                            <input type="subject" id="subject" name="Topic" class="form-control rounded-0" required>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <label class="text-black" for="message">@Moneyshowertech.PL.Resources.Language.Message</label>
+                            <textarea style="height:100px;" name="Message" id="message" cols="30" rows="7" class="form-control rounded-0" placeholder="@Moneyshowertech.PL.Resources.Language.ContactMessage" required></textarea>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <input type="submit" value="@Moneyshowertech.PL.Resources.Language.Send" class="btn btn-black rounded-0 py-3 px-4">
+                        </div>
+                    </div>
+                    @if (TempData["Success"] != null)
+                    {
+                        <div class="error-message"></div>
+                        <div class="alert col-md-12 alert-success" role="alert" id="success_message">
+                            @TempData["Success"] <i class="fas fa-paper-plane"></i>
+                        </div>
+                    }
+
+                </form>
+            </div>
+            <br>
+            <br>
+            <div id="idNotifError" style="display:none" class="alert alert-danger">Fail to send a message</div>
+            <div id="idNotifSuccess" style="display:none" class="alert alert-success">Message is sent</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let modalId = $('#image-gallery');
+
+    $(document)
+        .ready(function () {
+
+            loadGallery(true, 'a.thumbnail');
+
+            //This function disables buttons when needed
+            function disableButtons(counter_max, counter_current) {
+                $('#show-previous-image, #show-next-image')
+                    .show();
+                if (counter_max === counter_current) {
+                    $('#show-next-image')
+                        .hide();
+                } else if (counter_current === 1) {
+                    $('#show-previous-image')
+                        .hide();
+                }
+            }
+
+            function loadGallery(setIDs, setClickAttr) {
+                let current_image,
+                    selector,
+                    counter = 0;
+
+                $('#show-next-image, #show-previous-image')
+                    .click(function () {
+                        if ($(this)
+                            .attr('id') === 'show-previous-image') {
+                            current_image--;
+                        } else {
+                            current_image++;
+                        }
+
+                        selector = $('[data-image-id="' + current_image + '"]');
+                        updateGallery(selector);
+                    });
+
+                function updateGallery(selector) {
+                    let $sel = selector;
+                    current_image = $sel.data('image-id');
+                    $('#image-gallery-title')
+                        .text($sel.data('title'));
+                    $('#image-gallery-image')
+                        .attr('src', $sel.data('image'));
+                    disableButtons(counter, $sel.data('image-id'));
+                }
+
+                if (setIDs == true) {
+                    $('[data-image-id]')
+                        .each(function () {
+                            counter++;
+                            $(this)
+                                .attr('data-image-id', counter);
+                        });
+                }
+                $(setClickAttr)
+                    .on('click', function () {
+                        updateGallery($(this));
+                    });
+            }
+        });
+
+    // build key actions
+    $(document)
+        .keydown(function (e) {
+            switch (e.which) {
+                case 37: // left
+                    if ((modalId.data('bs.modal') || {})._isShown && $('#show-previous-image').is(":visible")) {
+                        $('#show-previous-image')
+                            .click();
+                    }
+                    break;
+
+                case 39: // right
+                    if ((modalId.data('bs.modal') || {})._isShown && $('#show-next-image').is(":visible")) {
+                        $('#show-next-image')
+                            .click();
+                    }
+                    break;
+
+                default:
+                    return; // exit this handler for other keys
+            }
+            e.preventDefault(); // prevent the default action (scroll / move caret)
+        });
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#idFormContact").on("submit", function (e) {
+            e.preventDefault();
+            //call external service
+            var url = "/Home/SendNewMessage";
+            var formdata = (window.FormData) ? new FormData(this) : null;
+            var fdata = (formdata !== null) ? formdata : $form.serialize();
+            $("#idSubmitMvt").attr("disabled", true);
+            $("#idNotifSuccess").hide();
+            $("#idNotifError").hide();
+            //get authorization keys.
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: fdata,
+                processData: false,
+                contentType: false,
+                success: function (data) {
+                    $("#idNotifSuccess").show();
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    console.log("Error");
+                    $("#idNotifError").show();
+                }
+            });
+        });
+    });
+</script>

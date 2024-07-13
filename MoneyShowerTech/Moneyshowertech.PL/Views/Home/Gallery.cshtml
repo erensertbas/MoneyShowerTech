@@ -1,0 +1,254 @@
+﻿
+@{
+    ViewBag.Title = "Gallery";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+
+
+    .galleryhvr-zoom-out-down {
+        position: relative;
+        display: block;
+        margin: 0;
+        max-width: 100%;
+        background-color: #3498db;
+        overflow: hidden;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+
+        .galleryhvr-zoom-out-down img {
+            vertical-align: top;
+            max-width: 100%;
+            width: 100%;
+        }
+
+        .galleryhvr-zoom-out-down .galleryhvr-content {
+            background-color: #fff;
+            padding: 25px;
+            position: absolute;
+            top: 15px;
+            bottom: 15px;
+            left: 15px;
+            right: 15px;
+            border: 1px solid rgba(0,0,0,.1)
+        }
+
+    [class*='galleryhvr-'], [class^=galleryhvr-] {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: all .35s ease;
+        transition: all .35s ease
+    }
+
+    .galleryhvr-zoom-out-down .galleryhvr-content {
+        -webkit-transform: scale(.5);
+        transform: scale(.5);
+        -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        opacity: 0
+    }
+
+    [class*='galleryhvr-zoom-out-down']:hover .galleryhvr-content,
+    [class^=galleryhvr-zoom-out-down]:hover .galleryhvr-content {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+        -webkit-transition-delay: .3s;
+        transition-delay: .3s
+    }
+
+    .galleryhvr-mid {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        left: 20px;
+        right: 20px;
+    }
+
+        .galleryhvr-mid a {
+            display: inline-block;
+            color: #fff;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            background-color: #3498db;
+        }
+
+            .galleryhvr-mid a:hover {
+                background-color: #1a1a1a;
+            }
+
+    .galleryhvr-zoom-out-down:hover img {
+        -webkit-animation: galleryhvr-zoom-out-down .4s linear;
+        animation: galleryhvr-zoom-out-down .4s linear;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards
+    }
+
+    @@-webkit-keyframes galleryhvr-zoom-out-down {
+        50% {
+            -webkit-transform: scale(.8) translateY(0);
+            transform: scale(.8) translateY(0);
+            opacity: .5
+        }
+
+        100% {
+            -webkit-transform: scale(.8) translateY(150%);
+            transform: scale(.8) translateY(150%);
+            opacity: .5
+        }
+    }
+
+    @@keyframes galleryhvr-zoom-out-down {
+        50% {
+            -webkit-transform: scale(.8) translateY(0);
+            transform: scale(.8) translateY(0);
+            opacity: .5
+        }
+
+        100% {
+            -webkit-transform: scale(.8) translateY(150%);
+            transform: scale(.8) translateY(150%);
+            opacity: .5
+        }
+    }
+</style>imagess
+
+<!-- CONTENT START -->
+<div class="page-content  ">
+
+    <!-- GALLERY SECTION START -->
+    <div class="section-full p-t80 p-b50 bg-white " style="padding-top:6rem;">
+        <div class="container-fluid">
+
+            <!-- GALLERY CONTENT START -->
+            <div class="masonry-wrap mfp-gallery  row clearfix d-flex justify-content-center flex-wrap">
+                <!-- COLUMNS 1 -->
+
+                <div class="masonry-item cat-1 col-xl-3 col-lg-4 col-md-6 m-b30 ">
+                    <div class="galleryhvr-zoom-out-down">
+                        <img src="~/Content/Template/imagess/WeInThePress/ilmuduru.jpg" alt="">
+                        <div class="galleryhvr-content">
+                            <div class="galleryhvr-mid">
+                                <h3 class="wt-title">İstanbul İl Müdürü</h3>
+                                <p></p>
+                                <a href="~/Content/Template/imagess/WeInThePress/ilmuduru.jpg" class="mfp-link"><i class="fa fa-search-plus"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- COLUMNS 2 -->
+                <div class="masonry-item cat-2 col-xl-3 col-lg-4 col-md-6 m-b30">
+                    <div class="galleryhvr-zoom-out-down">
+                        <img src="~/Content/Template/imagess/WeInThePress/endegerli3-patent.jpg" alt="">
+                        <div class="galleryhvr-content">
+                            <div class="galleryhvr-mid">
+                                <h3 class="wt-title">Teknofest Türk Patent Sertifikası</h3>
+                                <a href="~/Content/Template/imagess/WeInThePress/endegerli3-patent.jpg" class="mfp-link"><i class="fa fa-search-plus"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- COLUMNS 3 -->
+                <div class="masonry-item cat-3 col-xl-3 col-lg-4 col-md-6 m-b30">
+                    <div class="galleryhvr-zoom-out-down">
+                        <img src="~/Content/Template/imagess/WeInThePress/genclikvesporbakani.jpg" alt="">
+                        <div class="galleryhvr-content">
+                            <div class="galleryhvr-mid">
+                                <h3 class="wt-title">Gençlik ve Spor Bakanı Sn. Mehmet Muharrem Kasapoğlu</h3>
+                                <a href="~/Content/Template/imagess/WeInThePress/genclikvesporbakani.jpg" class="mfp-link"><i class="fa fa-search-plus"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- COLUMNS 4 -->
+                <div class="masonry-item cat-1 col-xl-3 col-lg-4 col-md-6 m-b30">
+                    <div class="galleryhvr-zoom-out-down">
+                        <img src="~/Content/Template/imagess/WeInThePress/GirisimKocu.jpg" alt="">
+                        <div class="galleryhvr-content">
+                            <div class="galleryhvr-mid">
+                                <h3 class="wt-title"> Girişim Koçu </h3>
+                                <a href="~/Content/Template/imagess/WeInThePress/GirisimKocu.jpg" class="mfp-link"><i class="fa fa-search-plus"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="masonry-item cat-1 col-xl-3 col-lg-4 col-md-6 m-b30 mt-4">
+                    <div class="galleryhvr-zoom-out-down">
+                        <img src="~/Content/Template/imagess/WeInThePress/ilerihaber.jpg" alt="">
+                        <div class="galleryhvr-content">
+                            <div class="galleryhvr-mid">
+                                <h3 class="wt-title">İleri Haber</h3>
+                                <a href="~/Content/Template/imagess/WeInThePress/ilerihaber.jpg" class="mfp-link"><i class="fa fa-search-plus"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="masonry-item cat-1 col-xl-3 col-lg-4 col-md-6 m-b30 mt-4">
+                    <div class="galleryhvr-zoom-out-down">
+                        <img src="~/Content/Template/imagess/WeInThePress/kibrishaber.jpg" alt="">
+                        <div class="galleryhvr-content">
+                            <div class="galleryhvr-mid">
+                                <h3 class="wt-title">Kıbrıs Haber</h3>
+                                <a href="~/Content/Template/imagess/WeInThePress/kibrishaber.jpg" class="mfp-link"><i class="fa fa-search-plus"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="masonry-item cat-1 col-xl-3 col-lg-4 col-md-6 m-b30 mt-4">
+                    <div class="galleryhvr-zoom-out-down">
+                        <img src="~/Content/Template/imagess/WeInThePress/kocholding.jpg" alt="">
+                        <div class="galleryhvr-content">
+                            <div class="galleryhvr-mid">
+                                <h3 class="wt-title">Koç Holding</h3>
+                                <a href="~/Content/Template/imagess/WeInThePress/kocholding.jpg" class="mfp-link"><i class="fa fa-search-plus"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="masonry-item cat-1 col-xl-3 col-lg-4 col-md-6 m-b30 mt-4">
+                    <div class="galleryhvr-zoom-out-down">
+                        <img src="~/Content/Template/imagess/WeInThePress/ntvroportaj.jpg" alt="">
+                        <div class="galleryhvr-content">
+                            <div class="galleryhvr-mid">
+                                <h3 class="wt-title">NTV Roportaj</h3>
+                                <a href="~/Content/Template/imagess/WeInThePress/ntvroportaj.jpg" class="mfp-link"><i class="fa fa-search-plus"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- GALLERY CONTENT END -->
+
+        </div>
+    </div>
+    <!-- GALLERY SECTION END -->
+
+</div>
+<!-- CONTENT END -->

@@ -1,0 +1,797 @@
+﻿
+@{
+    ViewBag.Title = "ThingShower";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br /> <br /> <br /> <br /> <br />
+<link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' />
+<style>
+    .sozlesme {
+        max-width: 100%;
+        color: black;
+        background-color: white;
+    }
+
+    @@media screen and (max-width: 600px) {
+        .modal-content {
+            max-width: 100% !important;
+        }
+
+        .modal-dialog {
+            margin-left: 10% !important;
+        }
+
+        .sozlesme {
+            max-width: 100%;
+            color: black;
+            background-color: white;
+        }
+
+        .LangButton {
+            width: 275px !important;
+        }
+    }
+
+    h3 {
+        font-size: 1.75rem;
+        color: #373d51;
+        padding: 1.3rem;
+        margin: 0;
+    }
+
+    .accordion a {
+        position: relative;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem 3rem 1rem 1rem;
+        color: #7288a2;
+        font-size: 1.15rem;
+        font-weight: 400;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+        .accordion a:hover,
+        .accordion a:hover::after {
+            cursor: pointer;
+            color: #2d71a1;
+        }
+
+            .accordion a:hover::after {
+                border: 1px solid #2d71a1;
+            }
+
+        .accordion a.active {
+            color: #ff5353;
+            border-bottom: 1px solid #2d71a1;
+        }
+
+        .accordion a::after {
+            font-family: 'Ionicons';
+            content: '\f218';
+            position: absolute;
+            float: right;
+            right: 1rem;
+            font-size: 1rem;
+            color: #7288a2;
+            padding: 5px;
+            width: 30px;
+            height: 30px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            border: 1px solid #7288a2;
+            text-align: center;
+            padding-top: 3px !important;
+            padding-right: 4px !important;
+        }
+
+        .accordion a.active::after {
+            font-family: 'Ionicons';
+            content: '\f209';
+            color: #2d71a1;
+            border: 1px solid #2d71a1;
+        }
+
+    .accordion .content {
+        opacity: 0;
+        padding: 0 1rem;
+        max-height: 0;
+        border-bottom: 1px solid #e5e5e5;
+        overflow: hidden;
+        clear: both;
+        -webkit-transition: all 0.2s ease 0.15s;
+        -o-transition: all 0.2s ease 0.15s;
+        transition: all 0.2s ease 0.15s;
+    }
+
+        .accordion .content p {
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
+        .accordion .content.active {
+            opacity: 1;
+            padding: 1rem;
+            max-height: 100%;
+            -webkit-transition: all 0.35s ease 0.15s;
+            -o-transition: all 0.35s ease 0.15s;
+            transition: all 0.35s ease 0.15s;
+        }
+
+
+    .setting {
+        content: '' !important;
+        vertical-align: baseline !important;
+        font-weight: inherit !important;
+        font-family: inherit !important;
+        font-style: inherit !important;
+        font-size: 100% !important;
+        border: 0 none !important;
+        outline: 0 !important;
+        margin: 0 !important;
+    }
+
+        .setting::after {
+            content: '' !important;
+            vertical-align: baseline !important;
+            font-weight: inherit !important;
+            font-family: inherit !important;
+            font-style: inherit !important;
+            font-size: 100% !important;
+            outline: 0 !important;
+            border: 0 none !important;
+            margin: 0 !important;
+        }
+
+        .setting.active::after {
+            content: '' !important;
+            vertical-align: baseline !important;
+            font-weight: inherit !important;
+            font-family: inherit !important;
+            font-style: inherit !important;
+            border: 0 none !important;
+            font-size: 100% !important;
+            outline: 0 !important;
+            margin: 0 !important;
+        }
+
+
+    .message {
+        position: fixed;
+        z-index: 20;
+        top: -200px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        width: 300px;
+        background: white;
+        border-radius: 8px;
+        padding: 30px;
+        text-align: center;
+        font-weight: 300;
+        color: #2c2928;
+        opacity: 0;
+        transition: top 0.3s cubic-bezier(0.31, 0.25, 0.5, 1.5), opacity 0.2s ease-in-out;
+    }
+
+        .message .check {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(4);
+            width: 120px;
+            height: 110px;
+            background: #71c341;
+            color: white;
+            font-size: 3.8rem;
+            padding-top: 10px;
+            border-radius: 50%;
+            opacity: 0;
+            transition: transform 0.2s 0.25s cubic-bezier(0.31, 0.25, 0.5, 1.5), opacity 0.1s 0.25s ease-in-out;
+        }
+
+        .message .scaledown {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+
+        .message p {
+            font-size: 1.1rem;
+            margin: 25px 0px;
+            padding: 0;
+        }
+
+            .message p:nth-child(2) {
+                font-size: 2.3rem;
+                margin: 40px 0px 0px 0px;
+            }
+
+        .message #ok {
+            position: relative;
+            color: white;
+            border: 0;
+            background: #71c341;
+            width: 100%;
+            height: 50px;
+            border-radius: 6px;
+            font-size: 1.2rem;
+            transition: background 0.2s ease;
+            outline: none;
+        }
+
+            .message #ok:hover {
+                background: #8ecf68;
+            }
+
+            .message #ok:active {
+                background: #5a9f32;
+            }
+
+    .comein {
+        top: 180px;
+        opacity: 1 !important;
+    }
+</style>
+
+<!-- Modal -->
+<div id="bmessage" style="width:100%;top:-40px;height:110%;background-color:rgb(0, 0, 0, 0.4);opacity:1;z-index:100 !important;position:fixed;display:none;">
+    <div class='message'>
+        <div class='check'>
+            &#10004;
+        </div>
+        <p>
+            @Moneyshowertech.PL.Resources.Language.SuccessTitle
+        </p>
+        <p>
+            @Moneyshowertech.PL.Resources.Language.SuccessMessage
+        </p>
+        <a href="~/Tr/MoneyCountingShower">
+            <button id='ok'>
+                @Moneyshowertech.PL.Resources.Language.SuccessOk
+            </button>
+        </a>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h3>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerContent1</h3> <hr style="max-width:3rem; " />
+
+        </div>
+        <div class="col-12 text-center mt-4">
+            <img class="px-2" src="~/Content/Template/imagess/itu.jpeg" style="height:170px; width:190px;" />
+            <img class="px-2" src="~/Content/Template/imagess/budotek.jpeg" style="height:170px; width:190px;" />
+
+            <h5 style="margin-top:1rem;">
+                Money Counting Shower, @Moneyshowertech.PL.Resources.Language.ThingShowerContent2
+            </h5>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="bg-white py-4 mb-4">
+            <div class="row mx-4 my-4 product-item-2 align-items-start">
+                <div class="col-md-6 mb-5 mb-md-0">
+
+                    <!--Carousel Wrapper-->
+                    <div id="carousel-example-2" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel">
+                        <!--Indicators-->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+                            @*<li data-target="#carousel-example-2" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-2" data-slide-to="2"></li>
+                            <li data-target="#carousel-example-2" data-slide-to="3"></li>
+                            <li data-target="#carousel-example-2" data-slide-to="4"></li>*@
+                        </ol>
+                        <!--/.Indicators-->
+                        <!--Slides-->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <div class="view">
+                                    <img class="d-block w-100" src="~/Content/Template/imagess/MoneyCountingShower/MoneyCountingShower.jpg" alt="First slide">
+                                    <div class="mask rgba-black-light"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--/.Slides-->
+                        <!--Controls-->
+                        <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                        <!--/.Controls-->
+                    </div>
+                    <!--/.Carousel Wrapper-->
+
+                </div>
+                <div class="col-md-5 ml-auto product-title-wrap">
+                    <h3 class="text-black mb-4 font-weight-bold">Money Counting Shower</h3>
+                    <p class="mb-4">@Moneyshowertech.PL.Resources.Language.MoneyCountingContent</p>
+                    @*<p class="mb-4" style="font-weight:bold;"><i>@Moneyshowertech.PL.Resources.Language.ThingShowerContent18</i></p>*@
+                    @*<p class="mb-4" style="font-weight:bold"><i>@Moneyshowertech.PL.Resources.Language.ThingShowerContent19</i></p>*@
+                    <div class="mb-4">
+                        <h3 class="text-black font-weight-bold h5">@Moneyshowertech.PL.Resources.Language.Fiyat:</h3>
+                        <div class="price"><del class="mr-2">@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerOPrice</del> @Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</div>
+                        @*<a href="https://www.iyzico.com"><img style="width:100px;height:50px;" src="~/Content/Template/imagess/CompanyLogos/iyzico.png" alt="İyzico" /></a>*@
+                    </div>
+                    <p>
+                        @if (Moneyshowertech.PL.Resources.Language.ShortName == "DE")
+                        {
+                            <button type="submit" id="go" data-toggle="modal" data-target="#exampleModalCenter" style="width:349px;" class="btn btn-black rounded-0 d-block d-lg-inline-block LangButton">@Moneyshowertech.PL.Resources.Language.Buy</button>
+                        }
+                        else
+                        {
+                            <button type="submit" id="go" data-toggle="modal" data-target="#exampleModalCenter" style="width:275px;" class="btn btn-black rounded-0 d-block d-lg-inline-block LangButton">@Moneyshowertech.PL.Resources.Language.Buy</button>
+                        }
+                    </p>
+                    <p>
+                        @if (Moneyshowertech.PL.Resources.Language.ShortName == "TR")
+                        {
+                            <a href="~/Content/Pdfler/MONEY SHOWER__.pdf" target="_blank" style="width:90px;" class="btn LangButton btn-black btn-outline-black rounded-0 d-block mb-2 mb-lg-0 d-lg-inline-block">@Moneyshowertech.PL.Resources.Language.Presentation</a>
+                            <a href="~/Content/Pdfler/MONEY COUNTING SHOWER_Kullanım Kılavuzu & Teknik Veriler.pdf" target="_blank" class="btn LangButton btn-black btn-outline-black rounded-0 d-block mb-2 mb-lg-0 d-lg-inline-block">@Moneyshowertech.PL.Resources.Language.UserGuide</a>
+                        }
+                        else if (Moneyshowertech.PL.Resources.Language.ShortName == "EN")
+                        {
+                            <a href="~/Content/Pdfler/MONEY SHOWER__.pdf" target="_blank" style="width:155px;" class="btn LangButton btn-black btn-outline-black rounded-0 d-block mb-2 mb-lg-0 d-lg-inline-block">@Moneyshowertech.PL.Resources.Language.Presentation</a>
+                            <a href="~/Content/Pdfler/MONEY COUNTING SHOWER_Kullanım Kılavuzu & Teknik Veriler.pdf" target="_blank" class="btn LangButton btn-black btn-outline-black rounded-0 d-block mb-2 mb-lg-0 d-lg-inline-block">@Moneyshowertech.PL.Resources.Language.UserGuide</a>
+                        }
+                        else
+                        {
+                            <a href="~/Content/Pdfler/MONEY SHOWER__.pdf" target="_blank" style="width:155px;" class="btn LangButton btn-black btn-outline-black rounded-0 d-block mb-2 mb-lg-0 d-lg-inline-block">@Moneyshowertech.PL.Resources.Language.Presentation</a>
+                            <a href="~/Content/Pdfler/MONEY COUNTING SHOWER_Kullanım Kılavuzu & Teknik Veriler.pdf" target="_blank" class="btn LangButton btn-black btn-outline-black rounded-0 d-block mb-2 mb-lg-0 d-lg-inline-block">@Moneyshowertech.PL.Resources.Language.UserGuide</a>
+                        }
+                        @if (Moneyshowertech.PL.Resources.Language.ShortName == "DE")
+                        {
+                            <a href="~/Content/Pdfler/Garanti_Belgesi.pdf" style="width:349px;" target="_blank" class="btn LangButton btn-black mt-2 btn-outline-black rounded-0 d-block mb-2 mb-lg-0 d-lg-inline-block">@Moneyshowertech.PL.Resources.Language.WarrantyCertificate</a>
+                        }
+                        else
+                        {
+                            <a href="~/Content/Pdfler/Garanti_Belgesi.pdf" style="width:275px;" target="_blank" class="btn LangButton btn-black mt-2 btn-outline-black rounded-0 d-block mb-2 mb-lg-0 d-lg-inline-block">@Moneyshowertech.PL.Resources.Language.WarrantyCertificate</a>
+                        }
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+    </div>
+
+    <div class="col-12 text-center">
+        <h5>
+            Money Counting Shower, @Moneyshowertech.PL.Resources.Language.ThingShowerIndex
+        </h5>
+
+    </div>
+    <br /> <br />
+    <div class="container col-12" style="margin-bottom:30px;">
+        <div class="accordion">
+            <div class="accordion-item">
+
+                <h5>
+                    @Moneyshowertech.PL.Resources.Language.ThingShowerContent3
+                </h5>
+
+                <a>
+                    @Moneyshowertech.PL.Resources.Language.ThingShowerContent4
+                </a>
+                <div class="content ">
+
+                    <div align="center">
+                        <img src="~/Content/Template/imagess/Banks/axess.png" />
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">@Moneyshowertech.PL.Resources.Language.ThingShowerContent5</th>
+                                <th scope="col">@Moneyshowertech.PL.Resources.Language.ThingShowerContent6</th>
+                                <th scope="col">@Moneyshowertech.PL.Resources.Language.ThingShowerContent7</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice2</td>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice3</td>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <hr />
+
+                    <div align="center"><img src="~/Content/Template/imagess/Banks/bonus.png" /> </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">@Moneyshowertech.PL.Resources.Language.ThingShowerContent5</th>
+                                <th scope="col">@Moneyshowertech.PL.Resources.Language.ThingShowerContent6</th>
+                                <th scope="col">@Moneyshowertech.PL.Resources.Language.ThingShowerContent7</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice2</td>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice3</td>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr />
+
+                    <div align="center">
+                        <img src="~/Content/Template/imagess/Banks/maximum.png" />
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">@Moneyshowertech.PL.Resources.Language.ThingShowerContent5</th>
+                                <th scope="col">@Moneyshowertech.PL.Resources.Language.ThingShowerContent6</th>
+                                <th scope="col">@Moneyshowertech.PL.Resources.Language.ThingShowerContent7</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice2</td>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice3</td>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr />
+
+                    <div align="center">
+                        <img src="~/Content/Template/imagess/Banks/cardfinans.png" />
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">@Moneyshowertech.PL.Resources.Language.ThingShowerContent5</th>
+                                <th scope="col">@Moneyshowertech.PL.Resources.Language.ThingShowerContent6</th>
+                                <th scope="col">@Moneyshowertech.PL.Resources.Language.ThingShowerContent7</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice2</td>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice3</td>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr />
+
+                    <div align="center">
+                        <img src="~/Content/Template/imagess/Banks/world.png" />
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">@Moneyshowertech.PL.Resources.Language.ThingShowerContent5</th>
+                                <th scope="col">@Moneyshowertech.PL.Resources.Language.ThingShowerContent6</th>
+                                <th scope="col">@Moneyshowertech.PL.Resources.Language.ThingShowerContent7</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice2</td>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice3</td>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr />
+
+                    <div align="center">
+                        <img src="~/Content/Template/imagess/Banks/paraf.png" />
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">@Moneyshowertech.PL.Resources.Language.ThingShowerContent5</th>
+                                <th scope="col">@Moneyshowertech.PL.Resources.Language.ThingShowerContent6</th>
+                                <th scope="col">@Moneyshowertech.PL.Resources.Language.ThingShowerContent7</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice2</td>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice3</td>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr />
+
+                    <div align="center">
+                        <img src="~/Content/Template/imagess/Banks/advantage.png" />
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">@Moneyshowertech.PL.Resources.Language.ThingShowerContent5</th>
+                                <th scope="col">@Moneyshowertech.PL.Resources.Language.ThingShowerContent6</th>
+                                <th scope="col">@Moneyshowertech.PL.Resources.Language.ThingShowerContent7</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice2</td>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice3</td>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr />
+
+                    <div align="center">
+                        <img src="~/Content/Template/imagess/Banks/combo.png" />
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">@Moneyshowertech.PL.Resources.Language.ThingShowerContent5</th>
+                                <th scope="col">@Moneyshowertech.PL.Resources.Language.ThingShowerContent6</th>
+                                <th scope="col">@Moneyshowertech.PL.Resources.Language.ThingShowerContent7</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice2</td>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice3</td>
+                                <td>@Moneyshowertech.PL.Resources.Language.MoneyCountingShowerNPrice</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr />
+
+
+                </div>
+            </div> <br />
+            <h5>
+                @Moneyshowertech.PL.Resources.Language.InstructionsTitle
+            </h5>
+            <div class="accordion-item">
+                <a class="active">@Moneyshowertech.PL.Resources.Language.InstructionsTitle2</a>
+                <div class="content active">
+                    <p>
+                        - @Moneyshowertech.PL.Resources.Language.InstructionsContent1 <br />
+
+                        - @Moneyshowertech.PL.Resources.Language.InstructionsContent5 <br />
+
+                        - @Moneyshowertech.PL.Resources.Language.InstructionsContent6 <br />
+
+                        - @Moneyshowertech.PL.Resources.Language.InstructionsContent7 <br />
+
+                        - @Moneyshowertech.PL.Resources.Language.InstructionsContent8 <br />
+
+                        - @Moneyshowertech.PL.Resources.Language.InstructionsContent9 <br />
+
+                        - @Moneyshowertech.PL.Resources.Language.InstructionsContent10 <br />
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="accordion-item">
+                <a>@Moneyshowertech.PL.Resources.Language.MikrobiyolojikAnaliz</a>
+
+                <div class="content">
+                    <div>
+                        <a href="~/Content/Pdfler/moneycountingshower.pdf" target="_blank" class="setting">Mikrobiyolojik Analiz 1</a>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr />
+
+        <br />
+
+        <div class="container">
+
+            <div class="row align-items-stretch">
+                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+                    <div class="unit-4 d-flex">
+                        <div class="unit-4-icon mr-4"><span class="text-primary fa fa-cogs"></span></div>
+                        <div>
+                            <h3>@Moneyshowertech.PL.Resources.Language.ThingShowerContent11</h3>
+                            <p>@Moneyshowertech.PL.Resources.Language.ThingShowerContent12</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="unit-4 d-flex">
+                        <div class="unit-4-icon mr-4"><span class="text-primary fa fa-magic"></span></div>
+                        <div>
+                            <h3>@Moneyshowertech.PL.Resources.Language.ThingShowerContent13</h3>
+                            <p>@Moneyshowertech.PL.Resources.Language.ThingShowerContent14</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="unit-4 d-flex">
+                        <div class="unit-4-icon mr-4"><span class="text-primary fa fa-building-o"></span></div>
+                        <div>
+                            <h3>@Moneyshowertech.PL.Resources.Language.ThingShowerContent15</h3>
+                            <p> @Moneyshowertech.PL.Resources.Language.ThingShowerContent16</p>
+                        </div>
+                    </div>
+                </div>
+                @*<div class="col-md-6 col-lg-3 mb-3 mb-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="unit-4 d-flex">
+                        <div class="unit-4-icon mr-4">
+                            <img loading="lazy" class="alignnone wp-image-1037" src="~/Content/Template/imagess/CompanyLogos/iyzico.png" alt="" width="96" height="50">
+                        </div>
+                        <div>
+                            <h3>İyzico</h3>
+                            <p><a href="https://iyzico.com/">İyzico</a> @Moneyshowertech.PL.Resources.Language.ThingShowerContent17</p>
+                        </div>
+                    </div>
+                </div>*@
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="col-12 text-center">
+        <p>
+            @Moneyshowertech.PL.Resources.Language.ThingShowerContent8
+        </p> <hr style="max-width:150px;" />
+
+        <p>@Moneyshowertech.PL.Resources.Language.ThingShowerContent9</p>
+        <hr style="max-width:150px;" />
+
+        <p>@Moneyshowertech.PL.Resources.Language.ThingShowerContent10</p>
+    </div>
+
+
+
+
+
+
+
+    <script>
+        const items = document.querySelectorAll(".accordion a");
+
+        function toggleAccordion() {
+            this.classList.toggle('active');
+            this.nextElementSibling.classList.toggle('active');
+        }
+
+        items.forEach(item => item.addEventListener('click', toggleAccordion));
+
+        $("#go").click(function () {
+            go(50);
+        });
+        $("#ok").click(function () {
+            go(500);
+        });
+
+        function go(nr) {
+            $(".message").toggleClass("comein");
+            $("#bmessage").css({ "display": "block" });
+            $(".check").toggleClass("scaledown");
+            $("#go").fadeToggle(nr);
+        }
+
+        $("#go").click(function (e) {
+
+            e.preventDefault();
+            $.ajax({
+                type: 'POST',
+                url: '/Home/MoneyCountingShower', // comma here instead of semicolon
+                success: function () {
+
+                }
+
+            });
+
+        });
+    </script>

@@ -1,0 +1,782 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Adress" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="Anasayfa" xml:space="preserve">
+    <value>Startseite</value>
+  </data>
+  <data name="BasındaBiz" xml:space="preserve">
+    <value>Wir in der Presse</value>
+  </data>
+  <data name="Bayilikler" xml:space="preserve">
+    <value>Händler</value>
+  </data>
+  <data name="Buy" xml:space="preserve">
+    <value>Kaufen</value>
+  </data>
+  <data name="Certificate" xml:space="preserve">
+    <value>Zertifizierungen</value>
+  </data>
+  <data name="ContactInfo" xml:space="preserve">
+    <value>Unsere Kontaktinformationen</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Kontaktiere uns</value>
+  </data>
+  <data name="Customers" xml:space="preserve">
+    <value>Firmenkunde</value>
+  </data>
+  <data name="Distribütörler" xml:space="preserve">
+    <value>Verteiler</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-Mail</value>
+  </data>
+  <data name="Firstname" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Follow" xml:space="preserve">
+    <value>Folge uns</value>
+  </data>
+  <data name="Hakkımızda" xml:space="preserve">
+    <value>Über uns</value>
+  </data>
+  <data name="Lastname" xml:space="preserve">
+    <value>Nachname</value>
+  </data>
+  <data name="Links" xml:space="preserve">
+    <value>Links</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Botschaft</value>
+  </data>
+  <data name="MikrobiyolojikAnaliz" xml:space="preserve">
+    <value>Mikrobiologische Analyse</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="Product" xml:space="preserve">
+    <value>Ihr Produkt</value>
+  </data>
+  <data name="ProductDetail" xml:space="preserve">
+    <value>Produktdetail</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Senden</value>
+  </data>
+  <data name="SSS" xml:space="preserve">
+    <value>FAQ</value>
+  </data>
+  <data name="ThingShowerIndex" xml:space="preserve">
+    <value>Es handelt sich um ein berührungsloses, elektronisches und tragbares Desinfektionsmittel, das innerhalb von Millisekunden eine Desinfektion von bis zu 99,99% ermöglicht, indem eine patentierte Lichttechnologie hergestellt wird, die tausendfach stärker ist als die herkömmliche Ultraviolettlichttechnologie.</value>
+  </data>
+  <data name="ThingShowerNPrice" xml:space="preserve">
+    <value>99.99€</value>
+  </data>
+  <data name="ThingShowerOPrice" xml:space="preserve">
+    <value>299.99€</value>
+  </data>
+  <data name="Topic" xml:space="preserve">
+    <value>Gegenstand</value>
+  </data>
+  <data name="Ürünlerimiz" xml:space="preserve">
+    <value>Unsere Produkte</value>
+  </data>
+  <data name="İletişim" xml:space="preserve">
+    <value>Kontakt</value>
+  </data>
+  <data name="ShortName" xml:space="preserve">
+    <value>DE</value>
+  </data>
+  <data name="AboutContent" xml:space="preserve">
+    <value>MoneyShowerTech Inc. Es ist ein ITU Arı Teknokent und Boğaziçi University BÜDOTEK Technopark. MoneyShowerTech Inc. ITU ARI TEKNOKENT ist unter seinen Partnern ein F &amp; E- und Innovationsunternehmen mit Technologietransferbüro, Proline und Technologietransferbüro der Universität BOĞAZİÇİ, das Hochtechnologie im Bereich Desinfektion produziert und sich auf Technologie konzentriert. Die Produktion erfolgt mit F &amp; E und Innovationsunterstützung von KOSGEB unter der Kontrolle unserer erfahrenen Mikrobiologen und Maschinenbauingenieure.</value>
+  </data>
+  <data name="Partners" xml:space="preserve">
+    <value>Unsere Partner</value>
+  </data>
+  <data name="InstructionsContent1" xml:space="preserve">
+    <value>Bitte lesen Sie vor der Verwendung die Gebrauchsanweisung</value>
+  </data>
+  <data name="InstructionsContent10" xml:space="preserve">
+    <value>Das Produkt ist absolut sicher bei der Desinfektion unbelebter Oberflächen.</value>
+  </data>
+  <data name="InstructionsContent2" xml:space="preserve">
+    <value>Von Kindern fern halten.</value>
+  </data>
+  <data name="InstructionsContent3" xml:space="preserve">
+    <value>Es sollte vorsichtig behandelt werden, um direkten Kontakt mit Augen und Haut zu vermeiden.</value>
+  </data>
+  <data name="InstructionsContent4" xml:space="preserve">
+    <value>Das Produkt ist kindersicher.</value>
+  </data>
+  <data name="InstructionsContent5" xml:space="preserve">
+    <value>Das Produkt enthält von der FDA zugelassene Lichttechnologie vom Typ Ultraviolett C.</value>
+  </data>
+  <data name="InstructionsContent6" xml:space="preserve">
+    <value>Mit seiner verstärkten Ultraviolettlicht-Technologie bietet es innerhalb von Sekunden eine berührungslose und sofortige Desinfektion.</value>
+  </data>
+  <data name="InstructionsContent7" xml:space="preserve">
+    <value>Die Ultraviolettstrahlentechnologie ist eine nicht radioaktive Technologie.</value>
+  </data>
+  <data name="InstructionsContent8" xml:space="preserve">
+    <value>Objekte, mit denen der Strahl in Kontakt kommt, werden nicht radioaktiv.</value>
+  </data>
+  <data name="InstructionsContent9" xml:space="preserve">
+    <value>Die im Produkt enthaltene elektronische Desinfektionstechnologie hinterlässt im Gegensatz zu chemischen Desinfektionsmitteln keine Rückstände. Es bietet die Möglichkeit, ohne chemische Desinfektionsmittel zu reinigen.</value>
+  </data>
+  <data name="InstructionsTitle" xml:space="preserve">
+    <value>Gebrauchsanweisung</value>
+  </data>
+  <data name="InstructionsTitle2" xml:space="preserve">
+    <value>Anleitung</value>
+  </data>
+  <data name="SSSContent1" xml:space="preserve">
+    <value>Mit Thing Shower können Sie alle leblosen Oberflächen sofort zu 99% desinfizieren. Zum Beispiel öffentliche Toiletten, Türgriffe, Aufzugsknöpfe, Gabeln, Messer und Gläser in Restaurants, Telefone, Babyflaschen und Schnuller, Kosmetika, Computermäuse, Computertastaturen, Außenflächen von Dosen, Bushalter, Lampenknöpfe, Metall Banknoten, Geldautomaten und Touchscreens, Rotlichttasten, Lebensmittel- und Getränkeautomaten, POS-Gerätetasten, TV-Bedienelemente, Zahnbürsten, Duschköpfe, Flüssigseifenspender und viele weitere Gegenstände können in Sekundenschnelle ohne Kontakt desinfiziert werden.</value>
+  </data>
+  <data name="SSSContent10" xml:space="preserve">
+    <value>Für Ihr elektronisches Desinfektionsmittel Thing Shower gilt eine Garantie von 2 Jahren ab Lieferdatum.</value>
+  </data>
+  <data name="SSSContent2" xml:space="preserve">
+    <value>Thing Shower wurde mit dem Ziel entwickelt, die Oberflächen zu reinigen, mit denen Sie in Kontakt kommen oder mit denen Mikroorganismen in Kontakt kommen. Daher wird das Produkt nicht für Lebewesen empfohlen.
+
+                    Verwenden Sie Ihre Thing-Dusche nicht zur Desinfektion von Körperteilen, einschließlich Ihrer Hände. Es wird auch nicht empfohlen, Ihre Thing-Dusche zum Reinigen Ihrer Haustiere und Pflanzen zu verwenden.</value>
+  </data>
+  <data name="SSSContent3" xml:space="preserve">
+    <value>Sie können Ihre mit Thing Shower desinfizierten Gegenstände sicher verwenden, solange sie nicht mikrobiell kontaminiert sind. Wir möchten Sie jedoch daran erinnern, dass sich sogar in der Luft Mikroorganismen befinden und das Produkt, das Sie desinfizieren, kontaminiert ist, solange Sie es im Freien lassen. Aus diesem Grund wird empfohlen, Ihre Artikel unmittelbar vor der Verwendung mit Thing Shower zu desinfizieren.</value>
+  </data>
+  <data name="SSSContent4" xml:space="preserve">
+    <value>Wenn Thing Shower in einem Abstand von 1 cm zur zu desinfizierenden Oberfläche gehalten wird, reinigt eine Fläche von 28 cm2 in 1 Sekunde bis zu 99,9% aller Mikroorganismen von Bakterien, Viren und Parasiten. Zum Beispiel im Durchschnitt Telefone in 1 Sekunde, Headsets in 1 Sekunde, Flaschenzitzen und Schnuller in 2 Sekunden, Besteck und Messer in 1 Sekunde, Tassen in 2 Sekunden, Aufzugsknöpfe in 1 Sekunde, Lampenknöpfe in 1 Sekunde, Münzen in 1 Sekunde, eine Oberfläche von Banknoten. In 1 Sekunde, Türgriffe in 1 Sekunde, Toilettensitze in 3 Sekunden, Lippenstifte in 1 Sekunde, Make-up-Schwämme in 1 Sekunde, Computermäuse in 1 Sekunde, Computertastaturen in 3 Sekunden, Geldautomaten Tastaturen in 2 Sekunden, Touchscreens von Geldautomaten in 2 Sekunden, Rotlichttasten In 1 Sekunde können die Tasten von Lebensmittel- und Getränkeautomaten in 1 Sekunde desinfiziert werden, die Tasten des POS-Geräts in 1 Sekunde, die TV-Bedienelemente in 2 Sekunden, die Zahnbürsten in 1 Sekunde, Duschköpfe in 1 Sekunde und Pumpenköpfe von Flüssigseifenspendern in 1 Sekunde mit einer Rate von bis zu 99%.</value>
+  </data>
+  <data name="SSSContent5" xml:space="preserve">
+    <value>Es wird empfohlen, das elektronische Desinfektionsmittel Thing Shower senkrecht zur Oberfläche in einem maximalen Abstand von 1 cm von der zu desinfizierenden Oberfläche zu halten. Wenn die Thing-Dusche in einem Abstand von 1 cm (1 Fingerdicke) zur zu desinfizierenden Oberfläche gehalten wird, reinigt eine Fläche von 9 cm2 (eine Fläche entspricht 1 TL-Münze) in 1 Sekunde bis zu 99% aller Mikroorganismen von Bakterien, Viren und Parasiten.</value>
+  </data>
+  <data name="SSSContent6" xml:space="preserve">
+    <value>Bei Verwendung gemäß den Gebrauchsanweisungen schadet Thing Shower Menschen, Tieren und der Umwelt nicht und ist absolut sicher in der Anwendung.</value>
+  </data>
+  <data name="SSSContent7" xml:space="preserve">
+    <value>Nein. Thing Shower wurde mit dem Ziel entwickelt, die leblosen Oberflächen zu reinigen, mit denen Sie in Kontakt kommen oder mit denen Mikroorganismen in Kontakt kommen. Daher wird das Produkt nicht für Lebewesen empfohlen.
+
+                    Verwenden Sie Ihre Thing Shower nicht zur Desinfektion von Körperteilen, einschließlich Ihrer Hände.</value>
+  </data>
+  <data name="SSSContent8" xml:space="preserve">
+    <value>Die Lebensdauer Ihres elektronischen Desinfektionsmittels Thing Shower beträgt 5 Jahre (ohne Batterie) und 2 Jahre ab Lieferdatum.
+
+                    Ihre Thing-Dusche verwendet wiederaufladbare Batterien. Wiederaufladbare Batterien haben eine begrenzte Lebensdauer.</value>
+  </data>
+  <data name="SSSContent9" xml:space="preserve">
+    <value>Thing Shower ist so konzipiert, dass es mit voller Effizienz arbeitet, solange keine Fehlfunktion vorliegt. Solange dies nicht fehlschlägt, desinfiziert Ihre Thing Shower innerhalb von Sekunden bis zu 99% berührungslos und sofort.</value>
+  </data>
+  <data name="SSSTitle" xml:space="preserve">
+    <value>Häufig gestellte Fragen</value>
+  </data>
+  <data name="SSSTitle1" xml:space="preserve">
+    <value>Was desinfiziere ich mit Thing Shower?</value>
+  </data>
+  <data name="SSSTitle10" xml:space="preserve">
+    <value>Was ist die Garantiezeit des Geräts?</value>
+  </data>
+  <data name="SSSTitle2" xml:space="preserve">
+    <value>Was soll ich nicht mit der Thing Shower desinfizieren?</value>
+  </data>
+  <data name="SSSTitle3" xml:space="preserve">
+    <value>Wie lange wiederholen wir den Vorgang bei der Desinfektion?</value>
+  </data>
+  <data name="SSSTitle4" xml:space="preserve">
+    <value>Wie viele Sekunden zerstört das Thing Shower-Gerät Krankheitserreger auf der behandelten Oberfläche?</value>
+  </data>
+  <data name="SSSTitle5" xml:space="preserve">
+    <value>Cihazı yüzeye ne kadar uzaklıktan tutmam gerekiyor ?</value>
+  </data>
+  <data name="SSSTitle6" xml:space="preserve">
+    <value>Wie weit sollte ich das Gerät von der Oberfläche halten?</value>
+  </data>
+  <data name="SSSTitle7" xml:space="preserve">
+    <value>Kann ich meine Hände mit Thing Shower reinigen?</value>
+  </data>
+  <data name="SSSTitle8" xml:space="preserve">
+    <value>Hat das Gerät eine Lebensdauer?</value>
+  </data>
+  <data name="SSSTitle9" xml:space="preserve">
+    <value>Verringert das Gerät nach längerer Verwendung seine Effizienz?</value>
+  </data>
+  <data name="ContactForm" xml:space="preserve">
+    <value>Kontakt Formular</value>
+  </data>
+  <data name="ContactMessage" xml:space="preserve">
+    <value>Schreibe deine Nachricht ...</value>
+  </data>
+  <data name="ContractContent11" xml:space="preserve">
+    <value>WARNUNG: In Übereinstimmung mit den einschlägigen Gesetzen lesen Sie bitte unseren Vertragstext unten, indem Sie in 12-Punkt- und Fettschrift drucken. Ebenfalls; Jeder Kunde, der Mitglied unserer Website ist und Einkäufe tätigt, hat alle Artikel des folgenden von uns erstellten Kaufvertrags ohne weitere Ankündigung gelesen und akzeptiert!</value>
+  </data>
+  <data name="ContractContent12" xml:space="preserve">
+    <value>MoneyShowerTech Teknoloji AR-GE San. Ve Tic. Fernabsatzvertrag</value>
+  </data>
+  <data name="ContractContent13" xml:space="preserve">
+    <value>Dieser Vertrag wurde in Übereinstimmung mit der im Amtsblatt vom 13.06.2003 mit der Nummer 25137 veröffentlichten Verordnung über die Antragsverfahren und Grundsätze von Fernabsatzverträgen erstellt. In Bezug auf die Verpflichtung, einen Vertrag über im Internet getätigte Verkäufe abzuschließen, gilt Folgendes.</value>
+  </data>
+  <data name="ContractContent14" xml:space="preserve">
+    <value>ARTIKEL 1 - GEGENSTAND</value>
+  </data>
+  <data name="ContractContent15" xml:space="preserve">
+    <value>Gegenstand dieses Vertrages ist MoneyShowerTech Teknoloji AR-GE San. Ve Tic. Es deckt die Rechte und Pflichten der Parteien gemäß den Bestimmungen des Gesetzes Nr. 4077 über den Verbraucherschutz - der Verordnung über die Grundsätze und Verfahren der Anwendung von Fernabsatzvereinbarungen über den Verkauf und die Lieferung des Produkts, das die Aktiengesellschaft an den KÄUFER verkauft, ab, dessen Eigenschaften und Verkaufspreis nachstehend angegeben sind.</value>
+  </data>
+  <data name="ContractContent16" xml:space="preserve">
+    <value>ARTIKEL 2.1 - VERKÄUFERINFORMATIONEN</value>
+  </data>
+  <data name="ContractContent17" xml:space="preserve">
+    <value>Titel
+
+                                            MoneyShowerTech Teknoloji AR-GE San. Ve Tic. Aktiengesellschaft
+
+                                            Adresse
+
+                                            Küçükyalı, Çınar Mahallesi, Yeşiltepe Straße, Rüzgar apt. NEIN = 37 Wohnung = 1 Maltepe / Istanbul
+
+                                            E-Mail: info@moneyshowertech.com
+
+                                            ARTIKEL 2.2 - KÄUFERINFORMATIONEN
+
+                                            Als Kunde werden die vom Käufer auf der Einkaufsseite www.moneyshowertech.com angegebenen Adressen und Kontaktinformationen zugrunde gelegt.</value>
+  </data>
+  <data name="ContractContent18" xml:space="preserve">
+    <value>ARTIKEL 3 - INFORMATIONEN ZUM VERTRAGSGEGENSTAND</value>
+  </data>
+  <data name="ContractContent19" xml:space="preserve">
+    <value>Es besteht aus Art, Menge, Marke / Modell, Farbe, Anzahl der Waren / Produkte / Dienstleistungen, Verkaufspreis, Zahlungsmethode und den Informationen zum Zeitpunkt des Abschlusses der Bestellung.</value>
+  </data>
+  <data name="ContractContent20" xml:space="preserve">
+    <value>ARTIKEL 4 - ALLGEMEINE BESTIMMUNGEN</value>
+  </data>
+  <data name="ContractContent21" xml:space="preserve">
+    <value>4.1 - Der KÄUFER erklärt, alle vorläufigen Informationen über die grundlegenden Merkmale, den Verkaufspreis und die Zahlungsmethode sowie die Lieferung des in Artikel 3 genannten Vertragsprodukts oder der in Artikel 3 genannten Produkte gelesen und informiert zu haben, und gibt die erforderliche Bestätigung elektronisch ab.
+
+                                            4.2 - Das oder die vertragspflichtigen Produkte werden an den KÄUFER oder die Person / Organisation unter der in den vorläufigen Informationen angegebenen Adresse geliefert, abhängig von der Entfernung des Wohnortes des KÄUFERS für jedes Produkt, sofern die gesetzliche Frist von 30 Tagen nicht überschritten wird. Diese Frist kann um maximal 10 Tage verlängert werden, sofern der KÄUFER vorher benachrichtigt wird.
+
+                                            4.3 - Wenn das vertragsgemäße Produkt an eine andere Person / Organisation als den KÄUFER geliefert werden soll, muss MoneyShowerTech Teknoloji AR-GE San. Ve Tic. Anonim Şirketi kann nicht verantwortlich gemacht werden.
+
+                                            4.4 - MoneyShowerTech Teknoloji AR-GE San. Ve Tic. Anonim Şirketi ist dafür verantwortlich, das vertragsgemäße Produkt in solider und vollständiger Weise gemäß den in der Bestellung angegebenen Qualifikationen und gegebenenfalls mit Garantiedokumenten und Benutzerhandbüchern zu liefern.
+
+                                           
+4.5 - Für die Lieferung des Vertragsprodukts hat MoneyShowerTech Teknoloji AR-GE San. Ve Tic. Die Aktiengesellschaft und der Preis müssen in der vom KÄUFER bevorzugten Zahlungsform gezahlt werden. Wenn der Produktpreis aus irgendeinem Grund nicht bezahlt oder in Bankunterlagen storniert wird, wird MoneyShowerTech Teknoloji AR-GE San. Ve Tic. Anonim Şirketi ist von der Verpflichtung zur Lieferung des Produkts befreit.
+
+                                            4.6 - Nach Lieferung des Produkts wird MoneyShowerTech Teknoloji AR-GE San. Ve Tic. Aktiengesellschaft, MoneyShowerTech Teknoloji AR-GE San. Ve Tic. Es ist obligatorisch, es an die Aktiengesellschaft zu senden. In diesem Fall sind die Versandkosten vom KÄUFER zu tragen.
+
+                                            4.7- MoneyShowerTech Teknoloji AR-GE San. Ve Tic. Anonim Şirketi ist verpflichtet, den KÄUFER über die Situation zu informieren, wenn er das vertragsgemäße Produkt aufgrund höherer Gewalt oder außergewöhnlicher Umstände wie widriger Wetterbedingungen, die den Transport verhindern, nicht innerhalb der Frist liefern kann. In diesem Fall kann der KÄUFER eines der Rechte nutzen, um die Bestellung zu stornieren, das vertragsgemäße Produkt durch einen Präzedenzfall zu ersetzen und / oder die Lieferfrist zu verschieben, bis die obstruktive Situation beseitigt ist.
+
+                                            4.8 Wenn in den gelieferten Produkten ein beschädigtes Produkt gefunden wird, wenden Sie sich an MoneyShowerTech Teknoloji AR-GE San. Ve Tic. Aktiengesellschaft, in diesem Fall werden die Frachtkosten von MoneyShowerTech Teknoloji AR-GE San übernommen. Ve Tic. Es wird von der Aktiengesellschaft übernommen.
+
+                                            4.9 - Dieser Vertrag wird vom KÄUFER unterzeichnet und an MoneyShowerTech Teknoloji AR-GE San übertragen. Ve Tic. Sie wird gültig, nachdem sie per Post an die Aktiengesellschaft geliefert wurde.</value>
+  </data>
+  <data name="ContractContent22" xml:space="preserve">
+    <value>Artikel 5 - Widerrufsrecht</value>
+  </data>
+  <data name="ContractContent23" xml:space="preserve">
+    <value>Der KÄUFER hat das Recht, innerhalb von (7) Tagen nach Lieferung des Vertragsprodukts an ihn oder die Person / Organisation an der angegebenen Adresse zurückzutreten. Um das Widerrufsrecht zu nutzen, muss MoneyShowerTech Teknoloji AR-GE San. Ve Tic. Die Aktiengesellschaft muss per E-Mail oder Telefon benachrichtigt werden und das Produkt darf nicht gemäß den Bestimmungen des jeweiligen Artikels verwendet werden. Im Falle der Ausübung dieses Rechts kann MoneyShowerTech Teknoloji AR-GE San. Ve Tic. Es ist obligatorisch, die Kopie des Frachtlieferungsberichts zurückzusenden, aus der hervorgeht, dass er an die Aktiengesellschaft gesendet wurde, sowie die Originalrechnung. Der Produktpreis wird dem KÄUFER innerhalb von 15 Tagen nach Erhalt dieser Unterlagen zurückgesandt. Wenn die Originalrechnung nicht gesendet wird, können Mehrwertsteuer und andere gesetzliche Verpflichtungen, falls vorhanden, nicht zurückgegeben werden. Die Versandkosten für das zurückgesandte Produkt aufgrund des Widerrufsrechts trägt der KÄUFER.
+
+                                            Wenn die Zahlung mit einer Kreditkarte oder einer ähnlichen Zahlungskarte erfolgt, kann der Verbraucher die Stornierung des Zahlungsvorgangs mit der Begründung beantragen, dass die Karte gegen seine Zustimmung und illegal verwendet wird. In diesem Fall gibt das ausstellende Institut den Zahlungsbetrag innerhalb von 15 Arbeitstagen nach Mitteilung des Widerspruchs an den Verbraucher zurück. Bei der Umsetzung dieses Vertrags haben Consumer Arbitration Committees und MoneyShowerTech Teknoloji AR-GE San. Ve Tic. Die Verbrauchergerichte bei der Abwicklung der eingetragenen Gesellschaft sind befugt. Im Falle des Auftragsabschlusses hat der KÄUFER alle Bedingungen dieses Vertrages akzeptiert.
+
+                                            Das Widerrufsrecht kann nicht für abgelaufene Produkte ausgeübt werden. Wenn die Zahlung mit einer Kreditkarte oder einer ähnlichen Zahlungskarte erfolgt, kann der Verbraucher die Stornierung des Zahlungsvorgangs mit der Begründung beantragen, dass die Karte gegen seine Zustimmung und illegal verwendet wird. In diesem Fall sendet das ausstellende Institut den Zahlungsbetrag innerhalb von 15 Arbeitstagen nach Bekanntgabe des Widerspruchs an den Verbraucher zurück. Bei der Umsetzung des Geschäftsvertrags haben Consumer Arbitration Committees und MoneyShowerTech Teknoloji AR-GE San. Ve Tic. Die Verbrauchergerichte bei der Abwicklung der Aktiengesellschaft sind befugt.
+
+                                            Im Falle des Auftragsabschlusses hat der KÄUFER alle Bedingungen dieses Vertrages akzeptiert.</value>
+  </data>
+  <data name="ContractContent2s1" xml:space="preserve">
+    <value>Alle in unserem Geschäft angebotenen Dienstleistungen sind Küçükyalı, Çınar Mahallesi, Yeşiltepe Sokak, Rüzgar apt. MoneyShowerTech Teknoloji AR-GE San. NO = 37 Daire = 1 Maltepe / Istanbul. Ve Tic. Anonim Şirketi ("Unternehmen") betrieben von.</value>
+  </data>
+  <data name="ContractContent2s10" xml:space="preserve">
+    <value>Unser Unternehmen legt großen Wert auf die Sicherheit von Kreditkarteninhabern, die auf unseren Einkaufsseiten einkaufen. Ihre Kreditkarteninformationen werden in keiner Weise in unserem System gespeichert.</value>
+  </data>
+  <data name="ContractContent2s11" xml:space="preserve">
+    <value>Die Zuverlässigkeit der Zahlungs- / Rechnungs- / Lieferadressinformationen von Online-Bestellungen per Kreditkarte wird von unserem Unternehmen gegen Kreditkartenbetrug geprüft. Aus diesem Grund muss zunächst die Richtigkeit der Finanz- und Adress- / Telefoninformationen bestätigt werden, damit Kunden, die zum ersten Mal Bestellungen von unseren Einkaufsseiten aufgeben, die Liefer- und Lieferphase erreichen. Bei Bedarf wird der Kunde des Kreditkarteninhabers oder die entsprechende Bank kontaktiert, um diese Informationen zu überprüfen.</value>
+  </data>
+  <data name="ContractContent2s12" xml:space="preserve">
+    <value>Nur Sie können auf alle Informationen zugreifen und diese ändern, während Sie Mitglied werden. Wenn Sie Ihre Anmeldeinformationen sicher schützen, können andere Benutzer nicht auf Informationen über Sie zugreifen und diese ändern.</value>
+  </data>
+  <data name="ContractContent2s13" xml:space="preserve">
+    <value>Internet-Shopping-Sites mit einer Informationsleitung oder einem Kundendienst, auf denen vollständige Adress- und Telefoninformationen angegeben sind, werden heute bevorzugt. Auf diese Weise erhalten Sie detaillierte Informationen zu allen Problemen, die Sie im Auge haben, und Sie erhalten zuverlässigere Informationen über die Zuverlässigkeit des Unternehmens, das Online-Einkaufsservices anbietet.</value>
+  </data>
+  <data name="ContractContent2s14" xml:space="preserve">
+    <value>MAIL ORDER CREDIT CARD INFORMATIONSSICHERHEIT</value>
+  </data>
+  <data name="ContractContent2s15" xml:space="preserve">
+    <value>Ihre Identitäts- und Kreditkarteninformationen, die Sie uns per Kreditkartenversand senden, werden von unserem Unternehmen gemäß dem Grundsatz der Vertraulichkeit aufbewahrt. Diese Informationen werden 60 Tage lang gegen mögliche Widerrufsbelehrungen von der Kreditkarte bei der möglichen Bank aufbewahrt und dann vernichtet. Wenn Sie einen anderen Betrag als das von Ihnen für den Preis der von Ihnen bestellten Produkte genehmigte Versandformular zurückziehen, können Sie natürlich Einwände gegen die Bank erheben. Dies stellt kein Risiko dar, da Sie die Zahlung dieses Betrags verhindern können.</value>
+  </data>
+  <data name="ContractContent2s16" xml:space="preserve">
+    <value>WEBSITES UND ANWENDUNGEN VON DRITTANBIETERN</value>
+  </data>
+  <data name="ContractContent2s17" xml:space="preserve">
+    <value>Unser Shop kann Links zu anderen Websites auf der Website erstellen. Unser Unternehmen übernimmt keine Verantwortung für die Datenschutzpraktiken und den Inhalt der Websites, auf die über diese Links zugegriffen wird. Die auf der Website unseres Unternehmens veröffentlichten Anzeigen werden über unsere Werbegeschäftspartner an unsere Nutzer verteilt. Die Datenschutzgrundsätze in diesem Vertrag gelten nur für die Nutzung unseres Shops und enthalten keine Websites Dritter.</value>
+  </data>
+  <data name="ContractContent2s18" xml:space="preserve">
+    <value>AUSNAHMEFÄLLEN</value>
+  </data>
+  <data name="ContractContent2s19" xml:space="preserve">
+    <value>Unter den unten angegebenen begrenzten Umständen kann unser Unternehmen die Informationen der Benutzer an Dritte weitergeben, die nicht den Bestimmungen dieser "Datenschutzrichtlinie" entsprechen. Diese Situationen sind begrenzt;</value>
+  </data>
+  <data name="ContractContent2s2" xml:space="preserve">
+    <value>Unser Unternehmen kann personenbezogene Daten für verschiedene Zwecke sammeln. Nachfolgend wird angegeben, wie und auf welche Weise die erhobenen personenbezogenen Daten erhoben werden, wie und auf welche Weise diese Daten geschützt werden.</value>
+  </data>
+  <data name="ContractContent2s20" xml:space="preserve">
+    <value>1. Gesetz, Gesetzesdekret, Verordnung usw. Einhaltung der Verpflichtungen aus den von der zuständigen Rechtsbehörde erlassenen und durchgesetzten gesetzlichen Vorschriften;</value>
+  </data>
+  <data name="ContractContent2s21" xml:space="preserve">
+    <value>2. Um die Anforderungen des "Mitgliedschaftsvertrags" und anderer Vereinbarungen, die unser Geschäft mit Benutzern geschlossen hat, zu erfüllen und in die Praxis umzusetzen;</value>
+  </data>
+  <data name="ContractContent2s22" xml:space="preserve">
+    <value>3. Informationen über Benutzer anzufordern, um eine ordnungsgemäß von der zuständigen Verwaltungs- und Justizbehörde durchgeführte Untersuchung oder Untersuchung durchzuführen;</value>
+  </data>
+  <data name="ContractContent2s23" xml:space="preserve">
+    <value>4. Wenn Informationen bereitgestellt werden müssen, um die Rechte oder die Sicherheit der Benutzer zu schützen.</value>
+  </data>
+  <data name="ContractContent2s24" xml:space="preserve">
+    <value>E-MAIL-SICHERHEIT</value>
+  </data>
+  <data name="ContractContent2s25" xml:space="preserve">
+    <value>Notieren Sie niemals Ihre Kreditkartennummer oder Passwörter in den E-Mails, die Sie bezüglich Ihrer Bestellungen an den Kundendienst unseres Geschäfts senden. Die in den E-Mails enthaltenen Informationen können von Dritten eingesehen werden. Unser Unternehmen kann unter keinen Umständen die Sicherheit der aus Ihren E-Mails übertragenen Informationen garantieren.</value>
+  </data>
+  <data name="ContractContent2s26" xml:space="preserve">
+    <value>BROWSER COOKIES</value>
+  </data>
+  <data name="ContractContent2s27" xml:space="preserve">
+    <value>Unser Unternehmen kann mithilfe einer technischen Kommunikationsdatei (Cookie-Cookie) Informationen über die Benutzer erhalten, die unseren Shop besuchen, und über die Nutzung der Website. Die genannten technischen Kommunikationsdateien sind kleine Textdateien, die eine Website an den Browser des Benutzers sendet, um sie im Hauptspeicher zu speichern. Die technische Kommunikationsdatei erleichtert die Nutzung des Internets, indem der Status und die Einstellungen der Site gespeichert werden.</value>
+  </data>
+  <data name="ContractContent2s28" xml:space="preserve">
+    <value>Die technische Kommunikationsdatei hilft dabei, statistische Informationen darüber zu erhalten, wie viele Personen die Website besuchen, zu welchem ​​Zweck, wie oft eine Person die Website besucht und wie lange sie auf der Website bleibt, und dynamisch Anzeigen und Inhalte von Benutzerseiten zu generieren, die speziell für Benutzer entwickelt wurden. Die technische Kommunikationsdatei dient nicht zum Empfangen von Daten oder anderen persönlichen Informationen aus dem Hauptspeicher oder Ihrer E-Mail. Die meisten Browser sind ursprünglich so konzipiert, dass sie die technische Kommunikationsdatei akzeptieren. Benutzer können die Einstellungen jedoch so ändern, dass die technische Kommunikationsdatei nicht eintrifft oder beim Senden der technischen Kommunikationsdatei eine Warnung ausgegeben wird.</value>
+  </data>
+  <data name="ContractContent2s29" xml:space="preserve">
+    <value>Unser Unternehmen kann die Bestimmungen dieser "Datenschutzrichtlinie" jederzeit ändern, indem es sie auf der Website veröffentlicht oder eine E-Mail an Benutzer sendet oder auf der Website veröffentlicht. Wenn sich die Bestimmungen der Datenschutzrichtlinie ändern, wird sie zum Zeitpunkt der Veröffentlichung wirksam.</value>
+  </data>
+  <data name="ContractContent2s3" xml:space="preserve">
+    <value>Durch das Ausfüllen verschiedener Formulare und Fragebögen in unserer Mitgliedschaft oder in unserem Geschäft werden einige persönliche Informationen (wie Vor- und Nachname, Unternehmensinformationen, Telefon-, Adress- oder E-Mail-Adressen) der Mitglieder von unserem Geschäft zu Abrechnungszwecken gesammelt.</value>
+  </data>
+  <data name="ContractContent2s30" xml:space="preserve">
+    <value>Sie können eine E-Mail an info@moneyshowertech.com senden, um alle Ihre Fragen und Vorschläge zu unseren Datenschutzbestimmungen zu erhalten. Die Kontaktinformationen unseres Unternehmens finden Sie unten.</value>
+  </data>
+  <data name="ContractContent2s31" xml:space="preserve">
+    <value>Firmenbezeichnung: MoneyShowerTech Teknoloji AR-GE San. Ve Tic. Aktiengesellschaft</value>
+  </data>
+  <data name="ContractContent2s4" xml:space="preserve">
+    <value>Unser Unternehmen kann seinen Kunden und Mitgliedern von Zeit zu Zeit Kampagneninformationen, Informationen zu neuen Produkten und Werbeangebote senden. Unsere Mitglieder können alle Arten von Entscheidungen treffen, ob sie solche Informationen erhalten möchten oder nicht, während sie Mitglied werden. Nach der Anmeldung eines Mitglieds kann diese Auswahl im Abschnitt mit den Kontoinformationen geändert werden oder sie können eine Benachrichtigung über den Link in der empfangenen Informationsnachricht vornehmen.</value>
+  </data>
+  <data name="ContractContent2s5" xml:space="preserve">
+    <value>Während des Genehmigungsprozesses, der über unser Geschäft oder per E-Mail durchgeführt wird, werden personenbezogene Daten, die von unseren Mitgliedern elektronisch an unser Geschäft übermittelt werden, nicht an Dritte weitergegeben, außer für die Zwecke und den Umfang, die in der "Benutzervereinbarung" mit unseren Mitgliedern festgelegt sind.</value>
+  </data>
+  <data name="ContractContent2s6" xml:space="preserve">
+    <value>Unser Unternehmen zeichnet die IP-Adresse seiner Mitglieder auf und verwendet sie, um Probleme im Zusammenhang mit dem System zu identifizieren und Probleme oder Streitigkeiten im Zusammenhang mit dem erbrachten Service schnell zu lösen. IP-Adressen können auch verwendet werden, um Benutzer im Allgemeinen zu identifizieren und umfassende demografische Informationen zu sammeln.</value>
+  </data>
+  <data name="ContractContent2s7" xml:space="preserve">
+    <value>Unser Unternehmen kann die angeforderten Informationen für sich selbst oder seine Mitarbeiter für das Direktmarketing verwenden, außerhalb der in der Mitgliedschaftsvereinbarung festgelegten Zwecke und des Umfangs. Persönliche Informationen können bei Bedarf auch verwendet werden, um den Benutzer zu kontaktieren. Von unserem Unternehmen angeforderte Informationen oder vom Benutzer bereitgestellte Informationen oder Informationen zu Transaktionen, die über unser Geschäft getätigt werden; Es kann von unserem Unternehmen und seinen Mitarbeitern für verschiedene statistische Auswertungen, die Erstellung von Datenbanken und Marktforschungen verwendet werden, ohne die Identität unserer Mitglieder außerhalb der in der "Mitgliedschaftsvereinbarung" festgelegten Zwecke und des Umfangs preiszugeben.</value>
+  </data>
+  <data name="ContractContent2s8" xml:space="preserve">
+    <value>Unser Unternehmen, vertrauliche Informationen streng privat und vertraulich zu behandeln, sie als Vertraulichkeitsverpflichtung zu betrachten und die Vertraulichkeit zu gewährleisten und aufrechtzuerhalten, alle erforderlichen Maßnahmen zu ergreifen und alle erforderlichen Maßnahmen zu ergreifen, um zu verhindern, dass vertrauliche Informationen ganz oder teilweise in den öffentlichen Bereich gelangen oder nicht autorisiert verwendet oder an Dritte weitergegeben werden. ist verpflichtet zu zeigen.</value>
+  </data>
+  <data name="ContractContent2s9" xml:space="preserve">
+    <value>KREDITKARTENSICHERHEIT</value>
+  </data>
+  <data name="ContractContent3s1" xml:space="preserve">
+    <value>Nutzungsbedingungen innerhalb der Website</value>
+  </data>
+  <data name="ContractContent3s10" xml:space="preserve">
+    <value>Rechte an geistigem Eigentum</value>
+  </data>
+  <data name="ContractContent3s11" xml:space="preserve">
+    <value>2.1. Alle geschützten oder nicht registrierten Rechte an geistigem Eigentum wie Titel, Firmenname, Marke, Patent, Logo, Design, Informationen und Verfahren auf dieser Website gehören dem Betreiber und der Eigentümerfirma der Website oder der betreffenden Person und stehen unter dem Schutz des nationalen und internationalen Rechts. Durch den Besuch dieser Website oder die Nutzung der Dienste auf dieser Website werden keine Rechte an den betreffenden Rechten an geistigem Eigentum eingeräumt.</value>
+  </data>
+  <data name="ContractContent3s12" xml:space="preserve">
+    <value>2.2. Die Informationen auf der Website dürfen in keiner Weise reproduziert, veröffentlicht, kopiert, präsentiert und / oder übertragen werden. Die gesamte Website oder ein Teil davon kann nicht ohne Genehmigung auf einer anderen Website verwendet werden.</value>
+  </data>
+  <data name="ContractContent3s13" xml:space="preserve">
+    <value>Geheime Information
+                                            3.1. Das Unternehmen wird die von den Benutzern über die Website übermittelten persönlichen Daten nicht an Dritte weitergeben. Diese persönlichen Informationen; Es enthält alle Arten anderer Informationen zur Identifizierung des Benutzers, wie z. B. Vor- und Nachname, Adresse, Telefonnummer, Mobiltelefon, E-Mail-Adresse der Person, und wird kurz als "Vertrauliche Informationen" bezeichnet.</value>
+  </data>
+  <data name="ContractContent3s14" xml:space="preserve">
+    <value>3.2. Der Benutzer kann nur Werbung, Werbung, Kampagne, Werbung, Ankündigung usw. verwenden. Es akzeptiert und erklärt, dass das Unternehmen, dem die Website gehört, zustimmt, seine Kommunikation, seinen Portfoliostatus und seine demografischen Informationen an seine Tochterunternehmen oder verbundenen Konzernunternehmen weiterzugeben, die auf die Verwendung im Rahmen von Marketingaktivitäten beschränkt sind. Diese persönlichen Daten können verwendet werden, um das Kundenprofil innerhalb des Unternehmens zu bestimmen, für das Kundenprofil geeignete Werbeaktionen und Kampagnen anzubieten und statistische Studien durchzuführen.</value>
+  </data>
+  <data name="ContractContent3s15" xml:space="preserve">
+    <value>3.3. Vertrauliche Informationen dürfen nur dann an die offiziellen Behörden weitergegeben werden, wenn diese Informationen von den offiziellen Behörden angefordert werden und wenn eine Erklärung gegenüber den Behörden gemäß den Bestimmungen der geltenden zwingenden Rechtsvorschriften erforderlich ist.</value>
+  </data>
+  <data name="ContractContent3s16" xml:space="preserve">
+    <value>Keine Garantie:</value>
+  </data>
+  <data name="ContractContent3s17" xml:space="preserve">
+    <value>DIESER VERTRAGSARTIKEL GILT FÜR DEN MAXIMALEN UMFANG, DER DURCH DAS ANWENDBARE RECHT ERLAUBT IST. DIE VON DER GESELLSCHAFT BEREITGESTELLTEN DIENSTLEISTUNGEN WERDEN "WIE BESEHEN" UND "WIE VERFÜGBAR" UND AUCH ALLE STILLSCHWEIGENDEN GEWÄHRLEISTUNGEN, EINSCHLIESSLICH STILLSCHWEIGENDER GEWÄHRLEISTUNGEN FÜR MARKTGÄNGIGKEIT, EIGNUNG FÜR EINEN BESTIMMTEN ZWECK ODER NICHTVERLETZUNG, ZUR VERFÜGUNG GESTELLT. ES GIBT KEINE GEWÄHRLEISTUNG, STATUTORISCH ODER ANDERWEITIG.</value>
+  </data>
+  <data name="ContractContent3s18" xml:space="preserve">
+    <value>Registrierung und Sicherheit
+                                            Der Benutzer muss korrekte, vollständige und aktuelle Registrierungsinformationen bereitstellen. Andernfalls gilt diese Vereinbarung als verletzt und das Konto kann geschlossen werden, ohne den Benutzer darüber zu informieren.</value>
+  </data>
+  <data name="ContractContent3s19" xml:space="preserve">
+    <value>Der Benutzer ist für die Kennwort- und Kontosicherheit auf der Website und auf Websites Dritter verantwortlich. Andernfalls kann das Unternehmen nicht für Datenverlust und Sicherheitsverletzungen oder Schäden an Hardware und Geräten verantwortlich gemacht werden.</value>
+  </data>
+  <data name="ContractContent3s2" xml:space="preserve">
+    <value>Bitte lesen Sie diese Nutzungsbedingungen sorgfältig durch, bevor Sie unsere Website nutzen.</value>
+  </data>
+  <data name="ContractContent3s20" xml:space="preserve">
+    <value>Höhere Gewalt</value>
+  </data>
+  <data name="ContractContent3s21" xml:space="preserve">
+    <value>Nicht unter der Kontrolle der Parteien; Naturkatastrophen, Brände, Explosionen, Bürgerkriege, Kriege, Unruhen, Volksbewegungen, Mobilisierungserklärung, Streiks, Aussperrungen und Epidemien, Infrastruktur- und Internetausfälle, Stromausfälle (im Folgenden als "Höhere Gewalt" bezeichnet). Wenn die Verpflichtungen von den Parteien nicht mehr akzeptiert werden, sind die Parteien nicht dafür verantwortlich. Während dieser Zeit werden die Rechte und Pflichten der Vertragsparteien aus diesem Abkommen ausgesetzt.</value>
+  </data>
+  <data name="ContractContent3s22" xml:space="preserve">
+    <value>Integrität und Anwendbarkeit der Vereinbarung</value>
+  </data>
+  <data name="ContractContent3s23" xml:space="preserve">
+    <value>Wenn eine der Bestimmungen dieses Vertrags teilweise oder vollständig ungültig wird, bleibt der Rest des Vertrags gültig.</value>
+  </data>
+  <data name="ContractContent3s24" xml:space="preserve">
+    <value>Vertragsänderungen</value>
+  </data>
+  <data name="ContractContent3s25" xml:space="preserve">
+    <value>Das Unternehmen kann die auf der Website angebotenen Dienstleistungen und die Bedingungen dieses Vertrags jederzeit ganz oder teilweise ändern. Die Änderungen werden ab dem Datum wirksam, an dem sie auf der Website veröffentlicht werden. Es liegt in der Verantwortung des Benutzers, die Änderungen zu verfolgen. Es wird davon ausgegangen, dass der Benutzer diese Änderungen akzeptiert hat, indem er weiterhin von den bereitgestellten Diensten profitiert.</value>
+  </data>
+  <data name="ContractContent3s26" xml:space="preserve">
+    <value>Benachrichtigung</value>
+  </data>
+  <data name="ContractContent3s27" xml:space="preserve">
+    <value>Alle Benachrichtigungen, die an die Parteien im Zusammenhang mit dieser Vereinbarung gesendet werden sollen, erfolgen über die bekannte E-Mail-Adresse des Unternehmens und die im Mitgliedschaftsformular des Benutzers angegebene E-Mail-Adresse. Der Benutzer akzeptiert, dass die Adresse, die er bei seiner Mitgliedschaft angegeben hat, die gültige Benachrichtigungsadresse ist und dass er die andere Partei innerhalb von 5 Tagen schriftlich benachrichtigt, wenn sie sich ändert. Andernfalls gelten die an diese Adresse gerichteten Benachrichtigungen als gültig.</value>
+  </data>
+  <data name="ContractContent3s28" xml:space="preserve">
+    <value>Beweisvereinbarung</value>
+  </data>
+  <data name="ContractContent3s29" xml:space="preserve">
+    <value>Bei Streitigkeiten zwischen den Parteien über Transaktionen im Zusammenhang mit diesem Vertrag werden die Bücher, Aufzeichnungen und Dokumente der Parteien sowie Computer- und Faxaufzeichnungen als Beweismittel gemäß dem Zivilprozessgesetz Nr. 6100 akzeptiert, und der Benutzer erklärt sich damit einverstanden, diesen Aufzeichnungen nicht zu widersprechen.</value>
+  </data>
+  <data name="ContractContent3s3" xml:space="preserve">
+    <value>Es wird davon ausgegangen, dass unsere Kunden, die diese Einkaufsseite und diesen Shop nutzen, die folgenden Bedingungen akzeptiert haben:</value>
+  </data>
+  <data name="ContractContent3s30" xml:space="preserve">
+    <value>Beilegung von Streitigkeiten</value>
+  </data>
+  <data name="ContractContent3s31" xml:space="preserve">
+    <value>Gerichte und Vollstreckungsbüros in Istanbul (Zentral) sind befugt, Streitigkeiten beizulegen, die sich aus der Umsetzung oder Auslegung dieser Vereinbarung ergeben.</value>
+  </data>
+  <data name="ContractContent3s4" xml:space="preserve">
+    <value>Die Webseiten und alle damit verknüpften Seiten ("Site") auf unserer Site befinden sich in Küçükyalı, Çınar Mahallesi, Yeşiltepe Sokak, Rüzgar apt. MoneyShowerTech Teknoloji AR-GE San. Unter der Adresse NO = 37 Daire = 1 Maltepe / Istanbul. Ve Tic. Anonim Şirketi (die Firma) gehört ihr und wird von ihr betrieben. Während Sie (der "Benutzer") alle auf der Website angebotenen Dienste nutzen, unterliegen Sie den folgenden Bedingungen, indem Sie den Dienst auf der Website nutzen und weiterhin nutzen. Es wird davon ausgegangen, dass Sie akzeptiert haben, dass Sie das Recht, die Befugnis und die Rechtsfähigkeit haben, einen Vertrag gemäß den Gesetzen zu unterzeichnen, an die Sie gebunden sind, dass Sie über 18 Jahre alt sind, dass Sie diesen Vertrag gelesen und verstanden haben und dass Sie an die im Vertrag festgelegten Bedingungen gebunden sind.</value>
+  </data>
+  <data name="ContractContent3s5" xml:space="preserve">
+    <value>Dieser Vertrag legt den Parteien die Rechte und Pflichten auf der Vertragsseite auf, und die Parteien erklären, dass sie die genannten Rechte und Pflichten vollständig, korrekt und rechtzeitig innerhalb der in diesem Vertrag geforderten Bedingungen erfüllen werden, wenn sie diesen Vertrag annehmen.</value>
+  </data>
+  <data name="ContractContent3s6" xml:space="preserve">
+    <value>VERANTWORTLICHKEITEN</value>
+  </data>
+  <data name="ContractContent3s7" xml:space="preserve">
+    <value>a.Das Unternehmen behält sich immer das Recht vor, Änderungen an Preisen und angebotenen Produkten und Dienstleistungen vorzunehmen.
+
+                                            b.Das Unternehmen akzeptiert und verpflichtet sich, dass das Mitglied von den vertraglichen Dienstleistungen profitiert, mit Ausnahme von technischen Fehlern.
+
+                                            c.Der Benutzer erklärt sich im Voraus damit einverstanden, dass er die Nutzung der Website nicht rückgängig macht oder andere Maßnahmen ergreift, um ihren Quellcode zu finden oder zu erhalten. Andernfalls haftet er für Schäden, die Dritten entstehen, und es werden rechtliche und strafrechtliche Maßnahmen ergriffen.</value>
+  </data>
+  <data name="ContractContent3s8" xml:space="preserve">
+    <value>d. Der Benutzer verstößt bei seinen Aktivitäten auf der Website, in einem Teil der Website oder in seiner Kommunikation gegen die allgemeine Moral und das Gesetz, verletzt die Rechte Dritter, ist irreführend, aggressiv, obszön, pornografisch, schädigt die Persönlichkeitsrechte, verletzt das Urheberrecht und fördert illegale Aktivitäten Es akzeptiert, dass keine Inhalte produziert oder geteilt werden. Andernfalls trägt er die alleinige Verantwortung für den möglicherweise auftretenden Schaden. In diesem Fall behalten sich die Beamten der Website das Recht vor, solche Konten auszusetzen, zu kündigen und rechtliche Schritte einzuleiten. Aus diesem Grund behält sie sich das Recht vor, Informationsanfragen von Justizbehörden zu Aktivitäten oder Benutzerkonten weiterzugeben.</value>
+  </data>
+  <data name="ContractContent3s9" xml:space="preserve">
+    <value>Die Mitglieder der Website sind für ihre Beziehungen untereinander oder zu Dritten verantwortlich.</value>
+  </data>
+  <data name="ContractTitle1" xml:space="preserve">
+    <value>Fernabsatzvertrag</value>
+  </data>
+  <data name="ContractTitle2" xml:space="preserve">
+    <value>Datenschutz- und Sicherheitsrichtlinien</value>
+  </data>
+  <data name="ContractTitle3" xml:space="preserve">
+    <value>Nutzungsbedingungen</value>
+  </data>
+  <data name="OurDealerships" xml:space="preserve">
+    <value>Händler</value>
+  </data>
+  <data name="OurDistributors" xml:space="preserve">
+    <value>Distributoren</value>
+  </data>
+  <data name="Contactt" xml:space="preserve">
+    <value>Kontaktiere uns</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Zeig mehr</value>
+  </data>
+  <data name="MoneyCountingContent" xml:space="preserve">
+    <value>Die Money Counting Shower ist in beschädigungsfreie Zählmaschinen integriert und ermöglicht es Banken, ihren Kunden in ihren Filialen sauberes Geld anzubieten.</value>
+  </data>
+  <data name="MoneyShowerContent" xml:space="preserve">
+    <value>Die Money Shower-Technologie reinigt Banknoten mit einem kontaktlosen und sofortigen Desinfektionssystem, das in den Geldautomaten integriert werden kann.</value>
+  </data>
+  <data name="SiteContent" xml:space="preserve">
+    <value>Kontaktieren Sie uns, um unser Händler oder Distributor zu werden</value>
+  </data>
+  <data name="ThingShowerContent1" xml:space="preserve">
+    <value>Warum ThingShower E-Desinfektionsmittel ?     </value>
+  </data>
+  <data name="ThingShowerContent10" xml:space="preserve">
+    <value>Verschiedene Methoden wurden verwendet, um Krankheitserreger auf Oberflächen von der Vergangenheit bis zur Gegenwart zu zerstören. Am meisten bevorzugt werden chemische Desinfektionsmittel und die Ultraviolettlichttechnologie. Die meisten chemischen Desinfektionsmittel hinterlassen chemische Abfälle und zeigen bei langfristiger Exposition toxische Wirkungen auf die menschliche Gesundheit. Die Ultraviolettlichttechnologie wird bevorzugt, da sie keine chemischen Abfälle hinterlässt, erschwinglich, nicht radioaktiv, von der FDA zugelassen und bei Langzeitanwendungen 4 logarithmische Reduktionen (99,99%) bietet. Ultraviolettes Licht wird seit vielen Jahren zur Desinfektion von Lebensmitteln verwendet. Wasser, Wasser, Weltraumlebensmittel sowie Lebensmittel und Trinkwasser werden in Verbrauchsmaterialqualität sicher gemacht. Obwohl die herkömmliche Lichttechnologie viele Vorteile bietet, beträgt ihre effektive Desinfektionszeit mindestens 1 Stunde.</value>
+  </data>
+  <data name="ThingShowerContent11" xml:space="preserve">
+    <value>Garantie</value>
+  </data>
+  <data name="ThingShowerContent12" xml:space="preserve">
+    <value>2 Jahre bedingungslose Garantie.</value>
+  </data>
+  <data name="ThingShowerContent13" xml:space="preserve">
+    <value>Patentierte Technologie</value>
+  </data>
+  <data name="ThingShowerContent14" xml:space="preserve">
+    <value>99,99% Oberflächenreinigungstechnologie.</value>
+  </data>
+  <data name="ThingShowerContent15" xml:space="preserve">
+    <value>F &amp; E.</value>
+  </data>
+  <data name="ThingShowerContent16" xml:space="preserve">
+    <value>Entwickelt in ITU ARI TEKNOKENT.</value>
+  </data>
+  <data name="ThingShowerContent17" xml:space="preserve">
+    <value>Sicheres Einkaufen mit</value>
+  </data>
+  <data name="ThingShowerContent2" xml:space="preserve">
+    <value>Es ist ein Produkt der ITU Arı Teknokent und der Boğaziçi University BÜDOTEK Technopark. Entwickelt mit erfahrenen Mikrobiologen</value>
+  </data>
+  <data name="ThingShowerContent3" xml:space="preserve">
+    <value>Zahlungsmöglichkeiten</value>
+  </data>
+  <data name="ThingShowerContent4" xml:space="preserve">
+    <value>Banken</value>
+  </data>
+  <data name="ThingShowerContent5" xml:space="preserve">
+    <value>Anzahl der Raten</value>
+  </data>
+  <data name="ThingShowerContent6" xml:space="preserve">
+    <value>Monatliche Bezahlung</value>
+  </data>
+  <data name="ThingShowerContent7" xml:space="preserve">
+    <value>Gesamtmenge</value>
+  </data>
+  <data name="ThingShowerContent8" xml:space="preserve">
+    <value>Es gibt Milliarden von Mikroorganismen wie Bakterien, Viren und Parasiten, die in jedem Teil des Lebens aus Tausenden von Sorten bestehen. Einige von ihnen sind gesundheitsfördernd, andere harmlos und andere schädliche Mikroorganismen. Schädliche Mikroorganismen werden als Krankheitserreger bezeichnet und verursachen, wenn sie in einer bestimmten Menge in den Körper aufgenommen werden, verschiedene Krankheiten. Während 1 einiger Krankheitserreger sehr schwerwiegende Symptome verursacht, kann die pathogene Dosis einiger von ihnen Tausende erreichen.</value>
+  </data>
+  <data name="ThingShowerContent9" xml:space="preserve">
+    <value>Gegenstände, die üblicherweise von Gesellschaften verwendet werden, wie unzureichend gekochte Lebensmittel, Lebensmittel, die ohne Einhaltung der Hygienevorschriften zubereitet wurden, Papiergeld, Toilette, Türgriffe, Fahrzeuge des öffentlichen Verkehrs und Geschirr in Restaurants, werden als Umgebungen bezeichnet, in denen diese pathogenen pathogenen Mikroorganismen häufig vorkommen. Wenn die genannten Lebensmittel in den Körper aufgenommen werden, wenn die genannten Gegenstände berührt werden, werden schädliche Auswirkungen auf die menschliche Gesundheit beobachtet. Aus diesem Grund ist es notwendig, die Lebensmittel gemäß den Hygienevorschriften gut zu kochen und zu konservieren, insbesondere die Oberflächen, die von Menschen geteilt werden und bei denen die Kontaktrate hoch ist, sollten desinfiziert werden.</value>
+  </data>
+  <data name="Fiyat" xml:space="preserve">
+    <value>Preis</value>
+  </data>
+  <data name="Presentation" xml:space="preserve">
+    <value>Präsentation</value>
+  </data>
+  <data name="ThingShowerContent18" xml:space="preserve">
+    <value>Bestellungen werden innerhalb des ersten darauf folgenden Werktages versendet.</value>
+  </data>
+  <data name="ThingShowerContent19" xml:space="preserve">
+    <value>Kostenloser Versand(DHL Ladung)</value>
+  </data>
+  <data name="ThingShowerLink" xml:space="preserve">
+    <value>https://iyzi.link/AFlQmg</value>
+  </data>
+  <data name="UserGuide" xml:space="preserve">
+    <value>Benutzerhandbuch</value>
+  </data>
+  <data name="WarrantyCertificate" xml:space="preserve">
+    <value>Gewährleistungszertifikat</value>
+  </data>
+  <data name="MoneyCountingShowerContent1" xml:space="preserve">
+    <value>Warum Money Counting Shower?</value>
+  </data>
+  <data name="MoneyShowerContent1" xml:space="preserve">
+    <value>Warum Money Shower?</value>
+  </data>
+  <data name="SliderText" xml:space="preserve">
+    <value>Ihre Gesundheit ist uns wichtig.</value>
+  </data>
+  <data name="Basket" xml:space="preserve">
+    <value>Korp</value>
+  </data>
+  <data name="DealerButonText" xml:space="preserve">
+    <value>Händlerformular, um Händler zu werden</value>
+  </data>
+  <data name="DistButonText" xml:space="preserve">
+    <value>Händlerformular, um Händler zu werden</value>
+  </data>
+  <data name="PaymentText" xml:space="preserve">
+    <value>Gehen Sie zur Zahlungsseite</value>
+  </data>
+  <data name="BasketText" xml:space="preserve">
+    <value>Dein Einkaufswagen ist leer</value>
+  </data>
+  <data name="BasketText1" xml:space="preserve">
+    <value>Wie möchten Sie sich unsere Produkte ansehen?</value>
+  </data>
+  <data name="BasketText2" xml:space="preserve">
+    <value>Beginn mit dem Einkauf</value>
+  </data>
+  <data name="ThingShowerShortContent" xml:space="preserve">
+    <value>Thing Shower ist ein berührungsloses, elektronisches und tragbares Desinfektionsmittel, das durch die Herstellung von Lichttechnologie innerhalb von Millisekunden eine Desinfektion von bis zu 99,99% ermöglicht.</value>
+  </data>
+  <data name="SuccessMessage" xml:space="preserve">
+    <value>Ihr Produkt wurde erfolgreich in den Warenkorb gelegt.</value>
+  </data>
+  <data name="SuccessOk" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="SuccessTitle" xml:space="preserve">
+    <value>Erfolgreich</value>
+  </data>
+  <data name="ThingShowerNPrice2" xml:space="preserve">
+    <value>49.99</value>
+  </data>
+  <data name="ThingShowerNPrice3" xml:space="preserve">
+    <value>33.33</value>
+  </data>
+  <data name="MoneyCountingShowerNPrice" xml:space="preserve">
+    <value>899.90$</value>
+  </data>
+  <data name="MoneyCountingShowerNPrice2" xml:space="preserve">
+    <value>449.95$</value>
+  </data>
+  <data name="MoneyCountingShowerNPrice3" xml:space="preserve">
+    <value>299.90$</value>
+  </data>
+  <data name="MoneyCountingShowerOPrice" xml:space="preserve">
+    <value>999.99$</value>
+  </data>
+  <data name="SliderContent" xml:space="preserve">
+    <value>So schnell !</value>
+  </data>
+  <data name="ThingShowerCatalog" xml:space="preserve">
+    <value>Katalog</value>
+  </data>
+  <data name="DiscountCode" xml:space="preserve">
+    <value>Kampagne Code</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Gesamt</value>
+  </data>
+  <data name="Colors" xml:space="preserve">
+    <value>Farben</value>
+  </data>
+  <data name="Black" xml:space="preserve">
+    <value>Matt-schwarz</value>
+  </data>
+  <data name="Blue" xml:space="preserve">
+    <value>Pazifikblau</value>
+  </data>
+  <data name="Gray" xml:space="preserve">
+    <value>Weltraum grau</value>
+  </data>
+  <data name="Pink" xml:space="preserve">
+    <value>SandRosa</value>
+  </data>
+</root>
